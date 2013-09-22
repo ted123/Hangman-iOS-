@@ -142,7 +142,10 @@
                                     <action selector="press_control:" destination="H7m-hU-yUM" eventType="valueChanged" id="ZXB-D9-gvV"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nce-Ah-VGJ">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nce-Ah-VGJ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="hFI-Kb-Ysu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -155,15 +158,16 @@
                             <constraint firstAttribute="bottom" secondItem="kou-7X-Qwx" secondAttribute="bottom" constant="152" id="7AL-64-HPx"/>
                             <constraint firstAttribute="trailing" secondItem="U8I-QA-6ah" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9Cu-Jp-ifA"/>
                             <constraint firstAttribute="bottom" secondItem="7eE-CU-hFP" secondAttribute="bottom" constant="68" id="AR9-Vu-V0X"/>
-                            <constraint firstItem="Nce-Ah-VGJ" firstAttribute="top" secondItem="CaX-L5-tkb" secondAttribute="top" constant="155" id="QYB-aP-7bC"/>
+                            <constraint firstItem="Nce-Ah-VGJ" firstAttribute="top" secondItem="CaX-L5-tkb" secondAttribute="top" constant="158" id="RnM-yp-EyE"/>
                             <constraint firstAttribute="trailing" secondItem="kou-7X-Qwx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="V0x-5y-rnq"/>
                             <constraint firstItem="iMs-er-1ep" firstAttribute="centerX" secondItem="7eE-CU-hFP" secondAttribute="centerX" type="default" id="WUl-Nj-dav"/>
+                            <constraint firstAttribute="trailing" secondItem="Nce-Ah-VGJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="aOu-M4-yti"/>
                             <constraint firstItem="vmt-Wb-HXt" firstAttribute="top" secondItem="CaX-L5-tkb" secondAttribute="top" constant="78" id="age-fO-mzd"/>
+                            <constraint firstItem="Nce-Ah-VGJ" firstAttribute="leading" secondItem="vmt-Wb-HXt" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="cCV-SW-xxf"/>
                             <constraint firstAttribute="bottom" secondItem="iMs-er-1ep" secondAttribute="bottom" constant="25" id="cV4-Kx-PXf"/>
                             <constraint firstItem="vmt-Wb-HXt" firstAttribute="leading" secondItem="CaX-L5-tkb" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eaQ-lX-uMq"/>
                             <constraint firstItem="1je-LC-8OX" firstAttribute="leading" secondItem="CaX-L5-tkb" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jyZ-Ae-qw2"/>
                             <constraint firstItem="kou-7X-Qwx" firstAttribute="leading" secondItem="CaX-L5-tkb" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kMn-Ze-CCr"/>
-                            <constraint firstAttribute="trailing" secondItem="Nce-Ah-VGJ" secondAttribute="trailing" constant="71" id="lGb-WX-Wm0"/>
                             <constraint firstAttribute="trailing" secondItem="7eE-CU-hFP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="oZD-st-HbU"/>
                             <constraint firstItem="7eE-CU-hFP" firstAttribute="leading" secondItem="CaX-L5-tkb" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pr1-bG-GgV"/>
                             <constraint firstAttribute="bottom" secondItem="U8I-QA-6ah" secondAttribute="bottom" constant="110" id="tP8-Mw-uwK"/>

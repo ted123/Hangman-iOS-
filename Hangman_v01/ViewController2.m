@@ -18,13 +18,26 @@ NSArray *words;
 int randomIndex;
 
 - (void)checkit:(NSString*)value{
-   NSString *temp;
-   NSRange result;
-    temp=[words objectAtIndex:randomIndex];
-    result=[temp rangeOfString:value];
-    if (result.location!=NSNotFound) {
-        _answer.text=[NSString stringWithFormat:@"%@ %d",value,randomIndex]; 
+   
+   NSString *temp =[words objectAtIndex:randomIndex];
+   NSString *loc=@"found at: ";
+   NSRange searchRange = NSMakeRange(0,temp.length);
+   NSRange foundRange;
+    while (searchRange.location<temp.length) {
+       searchRange.length = temp.length-searchRange.location;
+        foundRange = [temp rangeOfString:value options:1 range:searchRange];
+        if(foundRange.location != NSNotFound){
+            
+            searchRange.location = foundRange.location+foundRange.length;
+            loc=[loc stringByAppendingFormat:@" %d",searchRange.location];
+        }else{
+            break;
+        }
+        
     }
+    _answer.text=loc;
+    
+    
 
 }
 
