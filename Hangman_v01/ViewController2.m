@@ -10,13 +10,24 @@
 
 @interface ViewController2 ()
 -(void)checkit:(NSString*)value;
+-(void)randomIndex;
 @end
 
 @implementation ViewController2
+NSArray *words;
+int magicIndex;
+  
+- (void)randomIndex{
+    magicIndex=arc4random()%2;
+}
 
 - (void)checkit:(NSString*)value{
-    _answer.text=value;
+   NSString *temp;
+    temp=[words objectAtIndex:magicIndex];
     
+    if (temp==value) {
+        _answer.text=[NSString stringWithFormat:@"%@ %d",value,magicIndex];
+    }
 }
 
 
@@ -31,7 +42,10 @@
 
 - (void)viewDidLoad
 {
+    words = [NSArray arrayWithObjects:@"A",@"B",nil];
+    [self randomIndex];
     [super viewDidLoad];
+    
 	// Do any additional setup after loading the view.
 }
 
