@@ -170,6 +170,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2Ir-Y5-cxB"/>
+                    <connections>
+                        <outlet property="answer" destination="Nce-Ah-VGJ" id="MtX-OZ-1Se"/>
+                        <outlet property="b1" destination="kou-7X-Qwx" id="3xu-pm-Ccl"/>
+                        <outlet property="b2" destination="U8I-QA-6ah" id="Ldd-MY-5GG"/>
+                        <outlet property="b3" destination="7eE-CU-hFP" id="8Y6-Zf-z4a"/>
+                        <outlet property="b4" destination="iMs-er-1ep" id="mga-jK-ecQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVi-Yh-RrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,6 +195,11 @@
             <relationships>
                 <relationship kind="action" name="press_control:"/>
                 <relationship kind="action" name="return:"/>
+                <relationship kind="outlet" name="answer" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="b1" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="b2" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="b3" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="b4" candidateClass="UISegmentedControl"/>
             </relationships>
         </class>
     </classes>
