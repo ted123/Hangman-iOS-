@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FDC155917EE949100797FF4 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDC155817EE949100797FF4 /* ViewController2.m */; };
 		9FED2D8517EE8D28008E622A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FED2D8417EE8D28008E622A /* UIKit.framework */; };
 		9FED2D8717EE8D28008E622A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FED2D8617EE8D28008E622A /* Foundation.framework */; };
 		9FED2D8917EE8D28008E622A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FED2D8817EE8D28008E622A /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9FDC155717EE949100797FF4 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		9FDC155817EE949100797FF4 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		9FED2D8017EE8D28008E622A /* Hangman_v01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman_v01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FED2D8417EE8D28008E622A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9FED2D8617EE8D28008E622A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +86,8 @@
 		9FED2D8A17EE8D28008E622A /* Hangman_v01 */ = {
 			isa = PBXGroup;
 			children = (
+				9FDC155817EE949100797FF4 /* ViewController2.m */,
+				9FDC155717EE949100797FF4 /* ViewController2.h */,
 				9FED2D9317EE8D28008E622A /* AppDelegate.h */,
 				9FED2D9417EE8D28008E622A /* AppDelegate.m */,
 				9FED2D9C17EE8D28008E622A /* MainStoryboard.storyboard */,
@@ -176,6 +181,7 @@
 				9FED2D9117EE8D28008E622A /* main.m in Sources */,
 				9FED2D9517EE8D28008E622A /* AppDelegate.m in Sources */,
 				9FED2DA117EE8D28008E622A /* ViewController.m in Sources */,
+				9FDC155917EE949100797FF4 /* ViewController2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +298,7 @@
 				9FED2DA617EE8D28008E622A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

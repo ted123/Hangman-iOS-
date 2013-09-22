@@ -1,23 +1,196 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkV-Bb-U42">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="hNc-SG-0zA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="H7m-hU-yUM" kind="modal" modalTransitionStyle="crossDissolve" id="Lmw-Ia-SJs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hangman v1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmB-zw-tPW">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="Nq2-vK-Bm4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JmB-zw-tPW" firstAttribute="top" secondItem="3" secondAttribute="top" constant="150" id="5Wq-au-qBS"/>
+                            <constraint firstItem="JmB-zw-tPW" firstAttribute="centerX" secondItem="CkV-Bb-U42" secondAttribute="centerX" type="default" id="6YF-Xx-tIf"/>
+                            <constraint firstItem="CkV-Bb-U42" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="BCo-Bm-xHY"/>
+                            <constraint firstItem="CkV-Bb-U42" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="UQQ-xv-mYP"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--View Controller2-->
+        <scene sceneID="b2Y-9M-py1">
+            <objects>
+                <viewController storyboardIdentifier="ViewController2" id="H7m-hU-yUM" customClass="ViewController2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFit" id="CaX-L5-tkb">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1je-LC-8OX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5zs-iM-xV8"/>
+                                    <constraint firstAttribute="width" constant="70" id="UBa-5y-Lal"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <state key="normal" title="Quit">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="return:" destination="H7m-hU-yUM" eventType="touchUpInside" id="eb7-gG-6K3"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmt-Wb-HXt">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="VAm-6j-84V"/>
+                                    <constraint firstAttribute="width" constant="119" id="gNs-fR-i6Q"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kou-7X-Qwx">
+                                <segments>
+                                    <segment title="A"/>
+                                    <segment title="B"/>
+                                    <segment title="C"/>
+                                    <segment title="D"/>
+                                    <segment title="E"/>
+                                    <segment title="F"/>
+                                    <segment title="G"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="press_control:" destination="H7m-hU-yUM" eventType="valueChanged" id="zQn-UZ-yxW"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8I-QA-6ah">
+                                <segments>
+                                    <segment title="H"/>
+                                    <segment title="I"/>
+                                    <segment title="J"/>
+                                    <segment title="K"/>
+                                    <segment title="L"/>
+                                    <segment title="M"/>
+                                    <segment title="N"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="press_control:" destination="H7m-hU-yUM" eventType="valueChanged" id="djn-zO-EiS"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eE-CU-hFP">
+                                <segments>
+                                    <segment title="O"/>
+                                    <segment title="P"/>
+                                    <segment title="Q"/>
+                                    <segment title="R"/>
+                                    <segment title="S"/>
+                                    <segment title="T"/>
+                                    <segment title="U"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="press_control:" destination="H7m-hU-yUM" eventType="valueChanged" id="Vt4-Jy-fhe"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iMs-er-1ep">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="OQC-En-IHV"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="V"/>
+                                    <segment title="W"/>
+                                    <segment title="X"/>
+                                    <segment title="Y"/>
+                                    <segment title="Z"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="press_control:" destination="H7m-hU-yUM" eventType="valueChanged" id="ZXB-D9-gvV"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nce-Ah-VGJ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1je-LC-8OX" firstAttribute="top" secondItem="CaX-L5-tkb" secondAttribute="top" constant="20" symbolic="YES" type="default" id="1fk-V7-qUo"/>
+                            <constraint firstItem="U8I-QA-6ah" firstAttribute="leading" secondItem="CaX-L5-tkb" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="6bf-A0-aLB"/>
+                            <constraint firstAttribute="bottom" secondItem="kou-7X-Qwx" secondAttribute="bottom" constant="152" id="7AL-64-HPx"/>
+                            <constraint firstAttribute="trailing" secondItem="U8I-QA-6ah" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="9Cu-Jp-ifA"/>
+                            <constraint firstAttribute="bottom" secondItem="7eE-CU-hFP" secondAttribute="bottom" constant="68" id="AR9-Vu-V0X"/>
+                            <constraint firstItem="Nce-Ah-VGJ" firstAttribute="top" secondItem="CaX-L5-tkb" secondAttribute="top" constant="155" id="QYB-aP-7bC"/>
+                            <constraint firstAttribute="trailing" secondItem="kou-7X-Qwx" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="V0x-5y-rnq"/>
+                            <constraint firstItem="iMs-er-1ep" firstAttribute="centerX" secondItem="7eE-CU-hFP" secondAttribute="centerX" type="default" id="WUl-Nj-dav"/>
+                            <constraint firstItem="vmt-Wb-HXt" firstAttribute="top" secondItem="CaX-L5-tkb" secondAttribute="top" constant="78" id="age-fO-mzd"/>
+                            <constraint firstAttribute="bottom" secondItem="iMs-er-1ep" secondAttribute="bottom" constant="25" id="cV4-Kx-PXf"/>
+                            <constraint firstItem="vmt-Wb-HXt" firstAttribute="leading" secondItem="CaX-L5-tkb" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eaQ-lX-uMq"/>
+                            <constraint firstItem="1je-LC-8OX" firstAttribute="leading" secondItem="CaX-L5-tkb" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="jyZ-Ae-qw2"/>
+                            <constraint firstItem="kou-7X-Qwx" firstAttribute="leading" secondItem="CaX-L5-tkb" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kMn-Ze-CCr"/>
+                            <constraint firstAttribute="trailing" secondItem="Nce-Ah-VGJ" secondAttribute="trailing" constant="71" id="lGb-WX-Wm0"/>
+                            <constraint firstAttribute="trailing" secondItem="7eE-CU-hFP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="oZD-st-HbU"/>
+                            <constraint firstItem="7eE-CU-hFP" firstAttribute="leading" secondItem="CaX-L5-tkb" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pr1-bG-GgV"/>
+                            <constraint firstAttribute="bottom" secondItem="U8I-QA-6ah" secondAttribute="bottom" constant="110" id="tP8-Mw-uwK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2Ir-Y5-cxB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WVi-Yh-RrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="-16"/>
+        </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+        <class className="ViewController2" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController2.h"/>
+            <relationships>
+                <relationship kind="action" name="press_control:"/>
+                <relationship kind="action" name="return:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
