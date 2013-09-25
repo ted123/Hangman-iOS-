@@ -17,7 +17,7 @@
 @implementation ViewController2
 NSArray *words;
 NSString* blankWord;
-int randomIndex;
+int randomIndex,mistake=0;
 
 -(NSString*)placeSpaces:(NSString *)value{
     NSString* result=@"";
@@ -41,11 +41,13 @@ int randomIndex;
     }
 }
 
+
 - (void)checkit:(unichar)value{
    
 
     NSString* ans_prev=_answer.text;
     unichar ch;
+    Boolean change=FALSE;
   
     _answer.text=@"";
     for (int i=0; i<blankWord.length; i++) {
@@ -53,18 +55,47 @@ int randomIndex;
         
             if(ch==value){
                 _answer.text=[_answer.text stringByAppendingFormat:@"%c",value];
-                
+                change=TRUE;
             }else if(ch==' '){
                 _answer.text=[_answer.text stringByAppendingFormat:@" "];
             }else if([ans_prev characterAtIndex:i]!='_') {
                 _answer.text=[_answer.text stringByAppendingFormat:@"%c",[ans_prev characterAtIndex:i]];
             }else{
                 _answer.text=[_answer.text stringByAppendingFormat:@"_"];
+                
+               
             }
+        
          
     }
-
+    
+    if(!change){
+        mistake++;
+        
+        if(mistake==3){
+            UIAlertView *alertDialog;
+            alertDialog= [[UIAlertView alloc] initWithTitle:@"You suck!"
+                                                   message:@"Try again loser!"
+                                                  delegate:self
+                                         cancelButtonTitle:@"OK... T_T"
+                                         otherButtonTitles: nil];
+            [alertDialog show];
+            mistake=0;
+           
+        }
+    }
 }
+
+
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSString *buttonTitle = [alertView buttonTitleAtIndex:buttonIndex];
+    if ([buttonTitle isEqualToString:@"OK... T_T"]) {
+       [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    
+}
+
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

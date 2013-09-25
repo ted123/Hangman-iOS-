@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController2 : UIViewController
+<UIAlertViewDelegate>
 - (IBAction)return:(id)sender;
 - (IBAction)press_control:(id)sender;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *b1;
