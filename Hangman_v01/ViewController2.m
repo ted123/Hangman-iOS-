@@ -109,8 +109,8 @@ int randomIndex,mistake=0;
 
 - (void)viewDidLoad
 {
-    words = [NSArray arrayWithObjects:@"ARTIST  SAD",@"BROKEN HEART",nil];
-    randomIndex=arc4random()%2;
+    words = [NSArray arrayWithObjects:@"ARTIST  SAD",@"BROKEN HEART",@"I LOVE PATTY",@"LUKE THE ADDICT",@"BALAY NA BATO",nil];
+    randomIndex=arc4random()%5;
     blankWord=[self placeSpaces:words[randomIndex]];
     [self generateBlanks:(blankWord)];
     [super viewDidLoad];
@@ -129,9 +129,12 @@ int randomIndex,mistake=0;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)press_control:(id)sender {
+    UIColor *color = [UIColor colorWithRed: 251/255.0 green:175/255.0 blue:93/255.0 alpha:1.0];
     switch (_b1.selectedSegmentIndex) {
         case 0:
-                [self checkit:'A'];
+              //[_b1 setBackgroundColor:color forSegmentAtIndex:0];
+            [_b1 setEnabled:NO forSegmentAtIndex:0];
+            [self checkit:'A'];
             break;
         case 1:
                 [self checkit:'B'];

@@ -187,26 +187,6 @@
             <point key="canvasLocation" x="619" y="31"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-        </class>
-        <class className="ViewController2" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController2.h"/>
-            <relationships>
-                <relationship kind="action" name="press_control:"/>
-                <relationship kind="action" name="return:"/>
-                <relationship kind="outlet" name="answer" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="b1" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="b2" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="b3" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="b4" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
