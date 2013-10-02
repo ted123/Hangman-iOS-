@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -139,7 +139,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttons:" destination="H7m-hU-yUM" eventType="touchUpInside" id="mqu-QT-pg8"/>
+                                    <action selector="buttons:" destination="H7m-hU-yUM" eventType="touchUpInside" id="fZG-uD-PFk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2P-rc-dEt">
@@ -602,6 +602,32 @@
                     <navigationItem key="navigationItem" id="2Ir-Y5-cxB"/>
                     <connections>
                         <outlet property="answer" destination="Nce-Ah-VGJ" id="MtX-OZ-1Se"/>
+                        <outletCollection property="allButtons" destination="SXc-r3-0aI" id="2Ld-Qe-8Hd"/>
+                        <outletCollection property="allButtons" destination="MFt-sf-Hpw" id="n4y-cG-Mk9"/>
+                        <outletCollection property="allButtons" destination="z2P-rc-dEt" id="Jif-Qg-6eT"/>
+                        <outletCollection property="allButtons" destination="BYO-bs-PiR" id="Brl-3X-dhG"/>
+                        <outletCollection property="allButtons" destination="wV7-bH-o8J" id="N3b-DB-Tez"/>
+                        <outletCollection property="allButtons" destination="p3O-61-0B7" id="Fmd-dI-rVs"/>
+                        <outletCollection property="allButtons" destination="49H-GP-DF5" id="VNN-Qo-V1T"/>
+                        <outletCollection property="allButtons" destination="vaI-9h-QdL" id="g8l-eu-B1F"/>
+                        <outletCollection property="allButtons" destination="bse-rS-m7m" id="lV8-kK-lDv"/>
+                        <outletCollection property="allButtons" destination="YJ6-UC-P4y" id="nZf-xg-MMY"/>
+                        <outletCollection property="allButtons" destination="Jol-w6-GqE" id="u72-DZ-leJ"/>
+                        <outletCollection property="allButtons" destination="WnF-Zt-FZa" id="OhI-1e-vch"/>
+                        <outletCollection property="allButtons" destination="a1H-Uq-RRy" id="NGN-bR-U7w"/>
+                        <outletCollection property="allButtons" destination="gLu-rw-6gR" id="Uko-cZ-hok"/>
+                        <outletCollection property="allButtons" destination="biy-tN-rLQ" id="xKI-7F-EIr"/>
+                        <outletCollection property="allButtons" destination="mhx-Pe-b3B" id="huM-Ps-f9u"/>
+                        <outletCollection property="allButtons" destination="MBp-nl-s7Z" id="1TP-Ly-dyA"/>
+                        <outletCollection property="allButtons" destination="fO2-oF-YUa" id="BUF-fH-L2m"/>
+                        <outletCollection property="allButtons" destination="YF4-wh-Pgn" id="c2z-xT-Hk4"/>
+                        <outletCollection property="allButtons" destination="cev-Wy-aU0" id="WPL-DV-5a7"/>
+                        <outletCollection property="allButtons" destination="HSD-wI-1ZB" id="EYt-ld-YWS"/>
+                        <outletCollection property="allButtons" destination="cZn-hZ-mgH" id="8Pn-6v-Bkd"/>
+                        <outletCollection property="allButtons" destination="Gxb-Th-oRP" id="5ah-iv-k8o"/>
+                        <outletCollection property="allButtons" destination="VYS-Eg-NI2" id="cuf-zf-54Z"/>
+                        <outletCollection property="allButtons" destination="nOP-gC-RNY" id="ykD-0x-H4S"/>
+                        <outletCollection property="allButtons" destination="Mfk-yI-Cac" id="X20-Sm-Yrx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVi-Yh-RrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -620,13 +646,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController2.h"/>
             <relationships>
                 <relationship kind="action" name="buttons:"/>
-                <relationship kind="action" name="press_control:"/>
                 <relationship kind="action" name="return:"/>
                 <relationship kind="outlet" name="answer" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="b1" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="b2" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="b3" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="b4" candidateClass="UISegmentedControl"/>
+                <relationship kind="outletCollection" name="allButtons" candidateClass="UIButton"/>
             </relationships>
         </class>
     </classes>

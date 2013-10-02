@@ -11,6 +11,7 @@
 @interface ViewController2 ()
 -(void)checkit:(unichar)value;
 -(void)generateBlanks:(NSString*)value;
+-(void)newGame;
 -(NSString*)placeSpaces:(NSString*)value;
 @end
 
@@ -18,7 +19,19 @@
 NSArray *words;
 NSString* blankWord;
 int randomIndex,mistake=0;
-
+-(void)newGame{
+    
+    mistake=0;
+    randomIndex=arc4random()%5;
+    blankWord=[self placeSpaces:words[randomIndex]];
+    [self generateBlanks:(blankWord)];
+   
+    for (UIButton *b in self.allButtons) {
+        [b setHidden:FALSE];
+       
+    }
+   
+}
 -(NSString*)placeSpaces:(NSString *)value{
     NSString* result=@"";
     for (int i=0; i<value.length; i++) {
@@ -97,6 +110,11 @@ int randomIndex,mistake=0;
        // [self dismissViewControllerAnimated:YES completion:nil];
          [self.view.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
      
+    }else if ([buttonTitle isEqualToString:@"Proceed!"]) {
+        
+        NSLog(@"CONGRATS!");
+        [self newGame];
+        
     }
     
 }
@@ -144,15 +162,17 @@ int randomIndex,mistake=0;
     [selected setHidden:true];
     
     if([_answer.text isEqualToString:blankWord]){
-        NSLog(@"Congratulations YOU WON!");
+       
         UIAlertView *congratsDialog;
         congratsDialog= [[UIAlertView alloc] initWithTitle:@"Congratulations!"
-                                                message:@"Try again loser!"
+                                                message:@"You have succesfully guessed the word/phrase!"
                                                delegate:self
-                                      cancelButtonTitle:@"OK... T_T"
+                                      cancelButtonTitle:@"Proceed!"
                                       otherButtonTitles: nil];
         [congratsDialog show];
     }
     
 }
+
+
 @end

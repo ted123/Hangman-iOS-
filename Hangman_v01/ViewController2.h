@@ -15,4 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *answer;
 - (IBAction)buttons:(id)sender;
 
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *allButtons;
+
 @end
