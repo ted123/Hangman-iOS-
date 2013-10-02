@@ -89,8 +89,14 @@ int randomIndex,mistake=0;
 
 - (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     NSString *buttonTitle = [alertView buttonTitleAtIndex:buttonIndex];
+ 
     if ([buttonTitle isEqualToString:@"OK... T_T"]) {
-       [self dismissViewControllerAnimated:YES completion:nil];
+       //[self popTo  dismissViewControllerAnimated:YES completion:nil];
+      
+       // [self presentViewController:ViewController animated:NO completion:nil];
+       // [self dismissViewControllerAnimated:YES completion:nil];
+         [self.view.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
+     
     }
     
 }
@@ -125,106 +131,27 @@ int randomIndex,mistake=0;
 }
 
 - (IBAction)return:(id)sender {
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+        [self.view.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
+    //[self dismissViewControllerAnimated:YES completion:nil];
 }
-- (IBAction)press_control:(id)sender {
-    UIColor *color = [UIColor colorWithRed: 251/255.0 green:175/255.0 blue:93/255.0 alpha:1.0];
-    switch (_b1.selectedSegmentIndex) {
-        case 0:
-              //[_b1 setBackgroundColor:color forSegmentAtIndex:0];
-            [_b1 setEnabled:NO forSegmentAtIndex:0];
-            [self checkit:'A'];
-            break;
-        case 1:
-                [self checkit:'B'];
-            break;
-        case 2:
-                [self checkit:'C'];
-            break;
-        case 3:
-                [self checkit:'D'];
-            break;
-        case 4:
-                [self checkit:'E'];
-            break;
-        case 5:
-                [self checkit:'F'];
-            break;
-        case 6:
-                [self checkit:'G'];
-            break;
-        default:
-            break;
-    }
-    switch (_b2.selectedSegmentIndex) {
-        case 0:
-            [self checkit:'H'];
-            break;
-        case 1:
-            [self checkit:'I'];
-            break;
-        case 2:
-            [self checkit:'J'];
-            break;
-        case 3:
-            [self checkit:'K'];
-            break;
-        case 4:
-            [self checkit:'L'];
-            break;
-        case 5:
-            [self checkit:'M'];
-            break;
-        case 6:
-            [self checkit:'N'];
-            break;
-        default:
-            break;
-    }
-    switch (_b3.selectedSegmentIndex) {
-        case 0:
-            [self checkit:'O'];
-            break;
-        case 1:
-            [self checkit:'P'];
-            break;
-        case 2:
-            [self checkit:'Q'];
-            break;
-        case 3:
-            [self checkit:'R'];
-            break;
-        case 4:
-            [self checkit:'S'];
-            break;
-        case 5:
-            [self checkit:'T'];
-            break;
-        case 6:
-            [self checkit:'U'];
-            break;
-        default:
-            break;
-    }
-    switch (_b4.selectedSegmentIndex) {
-        case 0:
-            [self checkit:'V'];
-            break;
-        case 1:
-            [self checkit:'W'];
-            break;
-        case 2:
-            [self checkit:'X'];
-            break;
-        case 3:
-            [self checkit:'Y'];
-            break;
-        case 4:
-            [self checkit:'Z'];
-            break;
-        default:
-            break;
+- (IBAction)buttons:(UIButton *)sender {
+    int x=[sender tag];
+    UIButton *selected;
+    NSString *inputs=@"0ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    
+    [self checkit:[inputs characterAtIndex:x]];
+    selected=(UIButton*)[self.view viewWithTag:x];
+    [selected setHidden:true];
+    
+    if([_answer.text isEqualToString:blankWord]){
+        NSLog(@"Congratulations YOU WON!");
+        UIAlertView *congratsDialog;
+        congratsDialog= [[UIAlertView alloc] initWithTitle:@"Congratulations!"
+                                                message:@"Try again loser!"
+                                               delegate:self
+                                      cancelButtonTitle:@"OK... T_T"
+                                      otherButtonTitles: nil];
+        [congratsDialog show];
     }
     
 }

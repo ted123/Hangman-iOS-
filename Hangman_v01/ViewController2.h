@@ -11,11 +11,8 @@
 @interface ViewController2 : UIViewController
 <UIAlertViewDelegate>
 - (IBAction)return:(id)sender;
-- (IBAction)press_control:(id)sender;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *b1;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *b2;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *b3;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *b4;
+
 @property (weak, nonatomic) IBOutlet UILabel *answer;
+- (IBAction)buttons:(id)sender;
 
 @end
