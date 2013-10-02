@@ -7,7 +7,7 @@
 //
 
 #import "ViewController2.h"
-
+#import "gameoverPage.h"
 @interface ViewController2 ()
 -(void)checkit:(unichar)value;
 -(void)generateBlanks:(NSString*)value;
@@ -30,18 +30,24 @@ int randomIndex,mistake=0;
         [b setHidden:FALSE];
        
     }
-    randomIndex=arc4random()%5;
+    randomIndex=arc4random()%3;
     numString=[NSString stringWithFormat:@"%d",randomIndex];
     newWord = [finishedWords rangeOfString:numString];
     
     while(newWord.location!=NSNotFound){
-        randomIndex=arc4random()%5;
+        randomIndex=arc4random()%3;
         numString=[NSString stringWithFormat:@"%d",randomIndex];
        newWord = [finishedWords rangeOfString:numString];
         NSLog(@"nisud");
         counter++;
         if (counter>blankWord.length) {
             NSLog(@"you wooooon!");
+           // [self.restorationClass: dismissViewControllerAnimated:YES completion:nil];
+            gameoverPage *npage=[self.storyboard instantiateViewControllerWithIdentifier:@"gameoverPage"];
+            
+            
+            [self presentViewController:npage animated:YES completion:nil];
+            
             break;
         }
     }
@@ -152,8 +158,8 @@ int randomIndex,mistake=0;
 
 - (void)viewDidLoad
 {
-    words = [NSArray arrayWithObjects:@"ARTIST  SAD",@"BROKEN HEART",@"I LOVE PATTY",@"LUKE THE ADDICT",@"BALAY NA BATO",nil];
-    randomIndex=arc4random()%5;
+    words = [NSArray arrayWithObjects:@"ARTIST  SAD",@"BAD",@"BALAY NA BATO",nil];
+    randomIndex=arc4random()%3;
     blankWord=[self placeSpaces:words[randomIndex]];
     [self generateBlanks:(blankWord)];
      finishedWords=[finishedWords stringByAppendingFormat:@"%d",randomIndex];
