@@ -13,25 +13,44 @@
 -(void)generateBlanks:(NSString*)value;
 -(void)newGame;
 -(NSString*)placeSpaces:(NSString*)value;
+
 @end
 
 @implementation ViewController2
 NSArray *words;
 NSString* blankWord;
+NSString* finishedWords=@"";
 int randomIndex,mistake=0;
 -(void)newGame{
-    
+    int counter=0;
+    NSString* numString=@"";
+    NSRange newWord;
     mistake=0;
-    randomIndex=arc4random()%5;
-    blankWord=[self placeSpaces:words[randomIndex]];
-    [self generateBlanks:(blankWord)];
-   
     for (UIButton *b in self.allButtons) {
         [b setHidden:FALSE];
        
     }
-   
+    randomIndex=arc4random()%5;
+    numString=[NSString stringWithFormat:@"%d",randomIndex];
+    newWord = [finishedWords rangeOfString:numString];
+    
+    while(newWord.location!=NSNotFound){
+        randomIndex=arc4random()%5;
+        numString=[NSString stringWithFormat:@"%d",randomIndex];
+       newWord = [finishedWords rangeOfString:numString];
+        NSLog(@"nisud");
+        counter++;
+        if (counter>blankWord.length) {
+            NSLog(@"you wooooon!");
+            break;
+        }
+    }
+
+    finishedWords=[finishedWords stringByAppendingFormat:@"%d",randomIndex];
+    blankWord=[self placeSpaces:words[randomIndex]];
+    [self generateBlanks:(blankWord)];
 }
+
 -(NSString*)placeSpaces:(NSString *)value{
     NSString* result=@"";
     for (int i=0; i<value.length; i++) {
@@ -137,6 +156,7 @@ int randomIndex,mistake=0;
     randomIndex=arc4random()%5;
     blankWord=[self placeSpaces:words[randomIndex]];
     [self generateBlanks:(blankWord)];
+     finishedWords=[finishedWords stringByAppendingFormat:@"%d",randomIndex];
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
