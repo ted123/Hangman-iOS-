@@ -88,7 +88,7 @@
         <!--View Controller2 - ViewController2-->
         <scene sceneID="b2Y-9M-py1">
             <objects>
-                <viewController storyboardIdentifier="ViewController2" title="ViewController2" id="H7m-hU-yUM" customClass="ViewController2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController2" title="ViewController2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H7m-hU-yUM" customClass="ViewController2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFit" id="CaX-L5-tkb">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

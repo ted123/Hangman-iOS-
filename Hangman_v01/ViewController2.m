@@ -8,21 +8,58 @@
 
 #import "ViewController2.h"
 #import "gameoverPage.h"
-@interface ViewController2 ()
+@interface ViewController2()
 -(void)checkit:(unichar)value;
 -(void)generateBlanks:(NSString*)value;
 -(void)newGame;
 -(NSString*)placeSpaces:(NSString*)value;
+-(void)randomizeDifficulty;
+-(void)recordWord:(int)value;
+-(NSString*)selectRecordedWord;
 
 @end
 
 @implementation ViewController2
-NSArray *words;
+NSArray *words,*hints;
 NSString* blankWord;
-NSString* finishedWords=@"";
-int randomIndex,mistake=0;
+NSString* firstTracker=@"",*secondTracker=@"",*thirdTracker=@"";
+int randomIndex,randomDifficulty,mistake=0;
+-(void)recordWord:(int)value{
+    switch (randomDifficulty) {
+        case 0:
+             firstTracker=[firstTracker stringByAppendingFormat:@"%d",value];
+            break;
+        case 1:
+            secondTracker=[secondTracker stringByAppendingFormat:@"%d",value];
+            break;
+        case 2:
+            thirdTracker=[thirdTracker stringByAppendingFormat:@"%d",value];
+            break;
+            
+        default:
+            break;
+    }
+}
+-(NSString*)selectRecordedWord{
+    switch (randomDifficulty) {
+        case 0:
+            return firstTracker;
+            break;
+        case 1:
+            return secondTracker;
+            break;
+        case 2:
+            return thirdTracker;
+            break;
+            
+        default:
+            break;
+    }
+    return @"null";
+}
 -(void)newGame{
     int counter=0;
+    Boolean ftrackerFull=false,strackerFull=false,ttrackerFull=false;
     NSString* numString=@"";
     NSRange newWord;
     mistake=0;
@@ -30,29 +67,56 @@ int randomIndex,mistake=0;
         [b setHidden:FALSE];
        
     }
+    [self randomizeDifficulty];
     randomIndex=arc4random()%3;
     numString=[NSString stringWithFormat:@"%d",randomIndex];
-    newWord = [finishedWords rangeOfString:numString];
-    
+    newWord = [[self selectRecordedWord] rangeOfString:numString];
+      NSLog(@"randomIndex:%d randomDifficuty:%d",randomIndex,randomDifficulty);
     while(newWord.location!=NSNotFound){
+       
         randomIndex=arc4random()%3;
         numString=[NSString stringWithFormat:@"%d",randomIndex];
-       newWord = [finishedWords rangeOfString:numString];
-        NSLog(@"nisud");
+       newWord = [[self selectRecordedWord] rangeOfString:numString];
+        NSLog(@"nisuD %@ randomDifficuty:%d",[self selectRecordedWord],randomDifficulty);
         counter++;
-        if (counter>blankWord.length) {
+        if (counter>3) {
+             NSLog(@"checkifallfull %d",randomDifficulty);
+            if (randomDifficulty==0 && !ftrackerFull) {
+                ftrackerFull=true;
+                counter=0;
+                NSLog(@"bank1 is full");
+            }else if (randomDifficulty==1 && !strackerFull){
+                strackerFull=true;
+                counter=0;
+                 NSLog(@"bank2 is full");
+            }else if (randomDifficulty==2 && !ttrackerFull){
+                ttrackerFull=true;
+                counter=0;
+                 NSLog(@"bank3 is full");
+            }
+             [self randomizeDifficulty];
+            
+        }
+        if(ftrackerFull && strackerFull && ttrackerFull){
+            firstTracker=@"";
+            secondTracker=@"";
+            thirdTracker=@"";
+            ftrackerFull=false;
+            strackerFull=false;
+            ttrackerFull=false;
+            
             NSLog(@"you wooooon!");
-           // [self.restorationClass: dismissViewControllerAnimated:YES completion:nil];
             gameoverPage *npage=[self.storyboard instantiateViewControllerWithIdentifier:@"gameoverPage"];
             
-            
+           
             [self presentViewController:npage animated:YES completion:nil];
             
             break;
+            
         }
     }
 
-    finishedWords=[finishedWords stringByAppendingFormat:@"%d",randomIndex];
+    [self recordWord:randomIndex];
     blankWord=[self placeSpaces:words[randomIndex]];
     [self generateBlanks:(blankWord)];
 }
@@ -144,7 +208,24 @@ int randomIndex,mistake=0;
     
 }
 
-
+-(void)randomizeDifficulty{
+    randomDifficulty=arc4random()%3;
+    switch (randomDifficulty) {
+        case 0:
+            words = [NSArray arrayWithObjects:@"SMILING",@"BAD",@"CINNAMON",nil];
+            hints = [NSArray arrayWithObjects:@"Facial Epression",@"A negative trait",@"A kind of bread",nil];
+            break;
+        case 1:
+            words = [NSArray arrayWithObjects:@"A",@"BB",@"CCC",nil];
+             hints = [NSArray arrayWithObjects:@"A letter",@"A letter",@"A letter",nil];
+            break;
+        case 2:
+            words = [NSArray arrayWithObjects:@"DDDD",@"EEEEEE",@"FFFFFF",nil];
+            hints = [NSArray arrayWithObjects:@"A letter",@"A letter",@"A letter",nil];
+        default:
+            break;
+    }
+}
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -158,11 +239,11 @@ int randomIndex,mistake=0;
 
 - (void)viewDidLoad
 {
-    words = [NSArray arrayWithObjects:@"ARTIST  SAD",@"BAD",@"BALAY NA BATO",nil];
+    [self randomizeDifficulty];
     randomIndex=arc4random()%3;
     blankWord=[self placeSpaces:words[randomIndex]];
     [self generateBlanks:(blankWord)];
-     finishedWords=[finishedWords stringByAppendingFormat:@"%d",randomIndex];
+    [self recordWord:randomIndex];
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
