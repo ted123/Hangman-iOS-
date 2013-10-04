@@ -274,7 +274,7 @@ int randomIndex,randomDifficulty,mistake=0;
         congratsDialog= [[UIAlertView alloc] initWithTitle:@"Congratulations!"
                                                 message:@"You have succesfully guessed the word/phrase!"
                                                delegate:self
-                                      cancelButtonTitle:@"Proceed!"
+                                      cancelButtonTitle:@"***Proceed!"
                                       otherButtonTitles: nil];
         [congratsDialog show];
     }
