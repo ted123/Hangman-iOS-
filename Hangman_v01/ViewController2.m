@@ -110,7 +110,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
     return @"null";
 }
 -(void)newGame{
-    Boolean ftrackerFull=false,strackerFull=false,ttrackerFull=false,s=false,f=false,t=false;
+    Boolean ftrackerFull=false,strackerFull=false,ttrackerFull=false,changedController=false;
     NSString* numString=@"";
     NSRange newWord;
     mistake=0;
@@ -144,7 +144,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
                  NSLog(@"bank3 is full");
             }
             [self randomizeDifficulty:arc4random()%3];
-            f=false;t=false;s=false;
+            
             
         }
         if(ftrackerFull && strackerFull && ttrackerFull){
@@ -154,18 +154,19 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
             
            
             [self presentViewController:npage animated:YES completion:nil];
-            
+            changedController=true;
             break;
             
         }
     }
-
+    if(!changedController){
     [self recordWord:randomIndex];
     blankWord=[self placeSpaces:words[randomIndex]];
     [self generateBlanks:(blankWord)];
     [self selectImage];
     _himage.image=hangmanimg[0];
     _hintlabel.text=hints[randomIndex];
+    }
 }
 
 -(NSString*)placeSpaces:(NSString *)value{
@@ -288,7 +289,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
 - (void)viewDidLoad
 {
     NSLog(@"NI LOAD!");
-  
+    [self reset];
     [super viewDidLoad];
     name=((selectChar *)self.presentingViewController).playername.text;
     randomDifficulty=[((selectChar *)self.presentingViewController).tobehanged.text intValue];
