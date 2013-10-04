@@ -35,4 +35,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)begingame:(id)sender {
+    _tobehanged.text=@"1";
+    _playername.text=@"Didz";
+}
 @end

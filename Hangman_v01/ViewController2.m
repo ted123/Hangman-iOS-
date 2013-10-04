@@ -8,12 +8,13 @@
 
 #import "ViewController2.h"
 #import "gameoverPage.h"
+#import "selectChar.h"
 @interface ViewController2()
 -(void)checkit:(unichar)value;
 -(void)generateBlanks:(NSString*)value;
 -(void)newGame;
 -(NSString*)placeSpaces:(NSString*)value;
--(void)randomizeDifficulty;
+-(void)randomizeDifficulty:(int)value;
 -(void)recordWord:(int)value;
 -(NSString*)selectRecordedWord;
 
@@ -21,7 +22,7 @@
 
 @implementation ViewController2
 NSArray *words,*hints;
-NSString* blankWord;
+NSString* blankWord,*name;
 NSString* firstTracker=@"",*secondTracker=@"",*thirdTracker=@"";
 int randomIndex,randomDifficulty,mistake=0;
 -(void)recordWord:(int)value{
@@ -67,7 +68,7 @@ int randomIndex,randomDifficulty,mistake=0;
         [b setHidden:FALSE];
        
     }
-    [self randomizeDifficulty];
+    [self randomizeDifficulty:arc4random()%3];
     randomIndex=arc4random()%3;
     numString=[NSString stringWithFormat:@"%d",randomIndex];
     newWord = [[self selectRecordedWord] rangeOfString:numString];
@@ -94,7 +95,7 @@ int randomIndex,randomDifficulty,mistake=0;
                 counter=0;
                  NSLog(@"bank3 is full");
             }
-             [self randomizeDifficulty];
+            [self randomizeDifficulty:arc4random()%3];
             
         }
         if(ftrackerFull && strackerFull && ttrackerFull){
@@ -208,8 +209,8 @@ int randomIndex,randomDifficulty,mistake=0;
     
 }
 
--(void)randomizeDifficulty{
-    randomDifficulty=arc4random()%3;
+-(void)randomizeDifficulty:(int)value{
+    randomDifficulty=value;
     switch (randomDifficulty) {
         case 0:
             words = [NSArray arrayWithObjects:@"SMILING",@"BAD",@"CINNAMON",nil];
@@ -239,13 +240,17 @@ int randomIndex,randomDifficulty,mistake=0;
 
 - (void)viewDidLoad
 {
-    [self randomizeDifficulty];
+    
+  
+    [super viewDidLoad];
+    name=((selectChar *)self.presentingViewController).playername.text;
+    randomDifficulty=[((selectChar *)self.presentingViewController).tobehanged.text intValue];
+    [self randomizeDifficulty:randomDifficulty];
     randomIndex=arc4random()%3;
     blankWord=[self placeSpaces:words[randomIndex]];
     [self generateBlanks:(blankWord)];
     [self recordWord:randomIndex];
-    [super viewDidLoad];
-    
+    NSLog(@"%@ difficulty %d",name,randomDifficulty);
 	// Do any additional setup after loading the view.
 }
 

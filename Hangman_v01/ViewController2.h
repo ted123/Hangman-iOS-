@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController2 : UIViewController
-<UIAlertViewDelegate>
+<UIAlertViewDelegate,UITextFieldDelegate>
 - (IBAction)return:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *answer;
