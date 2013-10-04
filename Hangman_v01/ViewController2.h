@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *answer;
 - (IBAction)buttons:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *himage;
+@property (weak, nonatomic) IBOutlet UILabel *hintlabel;
 
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *allButtons;
 

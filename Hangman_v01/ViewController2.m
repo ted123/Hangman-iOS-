@@ -23,7 +23,7 @@
 
 @implementation ViewController2
 NSArray *words,*hints,*hangmanimg;
-NSString* blankWord,*name;
+NSString* blankWord,*wordhint,*name;
 NSString* firstTracker=@"",*secondTracker=@"",*thirdTracker=@"";
 int randomIndex,randomDifficulty,mistake=0,number=0;
 
@@ -74,6 +74,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
     thirdTracker=@"";
     mistake=0;
     number=0;
+    wordhint=@"";
 }
 -(void)recordWord:(int)value{
     switch (randomDifficulty) {
@@ -130,26 +131,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
         numString=[NSString stringWithFormat:@"%d",randomIndex];
        newWord = [[self selectRecordedWord] rangeOfString:numString];
        
-        
-        switch (randomIndex) {
-            case 0:
-                f=true;
-                break;
-            case 1:
-                s=true;
-                break;
-            case 2:
-                t=true;
-                break;
-            
-                
-            default:
-                break;
-        }
-        
-        
-        
-        if (f&&t&&s) {
+        if ([self selectRecordedWord].length==3) {
              
             if (randomDifficulty==0 && !ftrackerFull) {
                 ftrackerFull=true;
@@ -183,6 +165,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
     [self generateBlanks:(blankWord)];
     [self selectImage];
     _himage.image=hangmanimg[0];
+    _hintlabel.text=hints[randomIndex];
 }
 
 -(NSString*)placeSpaces:(NSString *)value{
@@ -316,6 +299,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
     [self recordWord:randomIndex];
     [self selectImage];
     _himage.image=hangmanimg[0];
+    _hintlabel.text=hints[randomIndex];
     //NSLog(@"%@ difficulty %d",name,randomDifficulty);
 	// Do any additional setup after loading the view.
 }
