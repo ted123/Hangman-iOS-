@@ -18,14 +18,54 @@
 -(void)recordWord:(int)value;
 -(void)reset;
 -(NSString*)selectRecordedWord;
-
+-(void)selectImage;
 @end
 
 @implementation ViewController2
-NSArray *words,*hints;
+NSArray *words,*hints,*hangmanimg;
 NSString* blankWord,*name;
 NSString* firstTracker=@"",*secondTracker=@"",*thirdTracker=@"";
 int randomIndex,randomDifficulty,mistake=0,number=0;
+
+-(void)selectImage{
+   
+    switch (randomDifficulty) {
+        case 0:
+            hangmanimg=[[NSArray alloc] initWithObjects:
+                        [UIImage imageNamed:@"kit1.png"],
+                        [UIImage imageNamed:@"kit2.png"],
+                        [UIImage imageNamed:@"kit3.png"],
+                        [UIImage imageNamed:@"kit4.png"],
+                        nil];
+
+            break;
+        case 1:
+            hangmanimg=[[NSArray alloc] initWithObjects:
+                        [UIImage imageNamed:@"rj1.png"],
+                        [UIImage imageNamed:@"rj2.png"],
+                        [UIImage imageNamed:@"rj3.png"],
+                        [UIImage imageNamed:@"rj4.png"],
+                        nil];
+            
+            break;
+        case 2:
+            hangmanimg=[[NSArray alloc] initWithObjects:
+                        [UIImage imageNamed:@"didz1.png"],
+                        [UIImage imageNamed:@"didz2.png"],
+                        [UIImage imageNamed:@"didz3.png"],
+                        [UIImage imageNamed:@"didz4.png"],
+                        nil];
+            
+            break;
+            
+            
+        default:
+            break;
+    }
+ 
+}
+
+
 -(void)reset{
     blankWord=@"";
     name=@"";
@@ -141,6 +181,8 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
     [self recordWord:randomIndex];
     blankWord=[self placeSpaces:words[randomIndex]];
     [self generateBlanks:(blankWord)];
+    [self selectImage];
+    _himage.image=hangmanimg[0];
 }
 
 -(NSString*)placeSpaces:(NSString *)value{
@@ -195,7 +237,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
     
     if(!change){
         mistake++;
-        
+         _himage.image=hangmanimg[mistake];
         if(mistake==3){
             [self reset];
             UIAlertView *alertDialog;
@@ -272,6 +314,8 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
     blankWord=[self placeSpaces:words[randomIndex]];
     [self generateBlanks:(blankWord)];
     [self recordWord:randomIndex];
+    [self selectImage];
+    _himage.image=hangmanimg[0];
     //NSLog(@"%@ difficulty %d",name,randomDifficulty);
 	// Do any additional setup after loading the view.
 }
