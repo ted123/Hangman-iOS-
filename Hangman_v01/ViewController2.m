@@ -16,6 +16,7 @@
 -(NSString*)placeSpaces:(NSString*)value;
 -(void)randomizeDifficulty:(int)value;
 -(void)recordWord:(int)value;
+-(void)reset;
 -(NSString*)selectRecordedWord;
 
 @end
@@ -24,7 +25,16 @@
 NSArray *words,*hints;
 NSString* blankWord,*name;
 NSString* firstTracker=@"",*secondTracker=@"",*thirdTracker=@"";
-int randomIndex,randomDifficulty,mistake=0;
+int randomIndex,randomDifficulty,mistake=0,number=0;
+-(void)reset{
+    blankWord=@"";
+    name=@"";
+    firstTracker=@"";
+    secondTracker=@"";
+    thirdTracker=@"";
+    mistake=0;
+    number=0;
+}
 -(void)recordWord:(int)value{
     switch (randomDifficulty) {
         case 0:
@@ -59,8 +69,7 @@ int randomIndex,randomDifficulty,mistake=0;
     return @"null";
 }
 -(void)newGame{
-    int counter=0;
-    Boolean ftrackerFull=false,strackerFull=false,ttrackerFull=false;
+    Boolean ftrackerFull=false,strackerFull=false,ttrackerFull=false,s=false,f=false,t=false;
     NSString* numString=@"";
     NSRange newWord;
     mistake=0;
@@ -68,45 +77,57 @@ int randomIndex,randomDifficulty,mistake=0;
         [b setHidden:FALSE];
        
     }
+    number++;
+    NSLog(@"%d Difficulty:%d Index:%d Prev:%@",number,randomDifficulty,randomIndex,[self selectRecordedWord]);
     [self randomizeDifficulty:arc4random()%3];
     randomIndex=arc4random()%3;
     numString=[NSString stringWithFormat:@"%d",randomIndex];
     newWord = [[self selectRecordedWord] rangeOfString:numString];
-      NSLog(@"randomIndex:%d randomDifficuty:%d",randomIndex,randomDifficulty);
+     // NSLog(@"randomIndex:%d randomDifficuty:%d",randomIndex,randomDifficulty);
     while(newWord.location!=NSNotFound){
        
         randomIndex=arc4random()%3;
         numString=[NSString stringWithFormat:@"%d",randomIndex];
        newWord = [[self selectRecordedWord] rangeOfString:numString];
-        NSLog(@"nisuD %@ randomDifficuty:%d",[self selectRecordedWord],randomDifficulty);
-        counter++;
-        if (counter>3) {
-             NSLog(@"checkifallfull %d",randomDifficulty);
+       
+        
+        switch (randomIndex) {
+            case 0:
+                f=true;
+                break;
+            case 1:
+                s=true;
+                break;
+            case 2:
+                t=true;
+                break;
+            
+                
+            default:
+                break;
+        }
+        
+        
+        
+        if (f&&t&&s) {
+             
             if (randomDifficulty==0 && !ftrackerFull) {
                 ftrackerFull=true;
-                counter=0;
                 NSLog(@"bank1 is full");
             }else if (randomDifficulty==1 && !strackerFull){
                 strackerFull=true;
-                counter=0;
-                 NSLog(@"bank2 is full");
+                NSLog(@"bank2 is full");
             }else if (randomDifficulty==2 && !ttrackerFull){
                 ttrackerFull=true;
-                counter=0;
                  NSLog(@"bank3 is full");
             }
             [self randomizeDifficulty:arc4random()%3];
+            f=false;t=false;s=false;
             
         }
         if(ftrackerFull && strackerFull && ttrackerFull){
-            firstTracker=@"";
-            secondTracker=@"";
-            thirdTracker=@"";
-            ftrackerFull=false;
-            strackerFull=false;
-            ttrackerFull=false;
-            
-            NSLog(@"you wooooon!");
+            [self reset];
+            //NSLog(@"you wooooon!");
             gameoverPage *npage=[self.storyboard instantiateViewControllerWithIdentifier:@"gameoverPage"];
             
            
@@ -176,6 +197,7 @@ int randomIndex,randomDifficulty,mistake=0;
         mistake++;
         
         if(mistake==3){
+            [self reset];
             UIAlertView *alertDialog;
             alertDialog= [[UIAlertView alloc] initWithTitle:@"You suck!"
                                                    message:@"Try again loser!"
@@ -202,7 +224,7 @@ int randomIndex,randomDifficulty,mistake=0;
      
     }else if ([buttonTitle isEqualToString:@"Proceed!"]) {
         
-        NSLog(@"CONGRATS!");
+       // NSLog(@"CONGRATS!");
         [self newGame];
         
     }
@@ -240,7 +262,7 @@ int randomIndex,randomDifficulty,mistake=0;
 
 - (void)viewDidLoad
 {
-    
+    NSLog(@"NI LOAD!");
   
     [super viewDidLoad];
     name=((selectChar *)self.presentingViewController).playername.text;
@@ -250,7 +272,7 @@ int randomIndex,randomDifficulty,mistake=0;
     blankWord=[self placeSpaces:words[randomIndex]];
     [self generateBlanks:(blankWord)];
     [self recordWord:randomIndex];
-    NSLog(@"%@ difficulty %d",name,randomDifficulty);
+    //NSLog(@"%@ difficulty %d",name,randomDifficulty);
 	// Do any additional setup after loading the view.
 }
 
@@ -261,6 +283,7 @@ int randomIndex,randomDifficulty,mistake=0;
 }
 
 - (IBAction)return:(id)sender {
+    [self reset];
         [self.view.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
     //[self dismissViewControllerAnimated:YES completion:nil];
 }
