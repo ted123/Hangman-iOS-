@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		305EBE1017FE795D008A278E /* selectChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 305EBE0F17FE795D008A278E /* selectChar.m */; };
 		9FD03A0F17FC301700DF810E /* gameoverPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD03A0E17FC301700DF810E /* gameoverPage.m */; };
 		9FDC155917EE949100797FF4 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDC155817EE949100797FF4 /* ViewController2.m */; };
 		9FED2D8517EE8D28008E622A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FED2D8417EE8D28008E622A /* UIKit.framework */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		305EBE0E17FE795D008A278E /* selectChar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectChar.h; sourceTree = "<group>"; };
+		305EBE0F17FE795D008A278E /* selectChar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectChar.m; sourceTree = "<group>"; };
 		9FD03A0D17FC301700DF810E /* gameoverPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameoverPage.h; sourceTree = "<group>"; };
 		9FD03A0E17FC301700DF810E /* gameoverPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameoverPage.m; sourceTree = "<group>"; };
 		9FDC155717EE949100797FF4 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				9FED2D9317EE8D28008E622A /* AppDelegate.h */,
 				9FED2D9417EE8D28008E622A /* AppDelegate.m */,
 				9FED2D9C17EE8D28008E622A /* MainStoryboard.storyboard */,
+				305EBE0E17FE795D008A278E /* selectChar.h */,
+				305EBE0F17FE795D008A278E /* selectChar.m */,
 				9FED2D9F17EE8D28008E622A /* ViewController.h */,
 				9FED2DA017EE8D28008E622A /* ViewController.m */,
 				9FED2D8B17EE8D28008E622A /* Supporting Files */,
@@ -188,6 +193,7 @@
 				9FED2DA117EE8D28008E622A /* ViewController.m in Sources */,
 				9FDC155917EE949100797FF4 /* ViewController2.m in Sources */,
 				9FD03A0F17FC301700DF810E /* gameoverPage.m in Sources */,
+				305EBE1017FE795D008A278E /* selectChar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
