@@ -23,6 +23,7 @@
 		30B5CDEC1801743D005BB598 /* rj2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B5CDDD1801743D005BB598 /* rj2.jpg */; };
 		30B5CDED1801743D005BB598 /* rj3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B5CDDE1801743D005BB598 /* rj3.jpg */; };
 		30B5CDEE1801743D005BB598 /* rj4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B5CDDF1801743D005BB598 /* rj4.jpg */; };
+		9FCCDC491801827600671472 /* scorePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCDC481801827600671472 /* scorePage.m */; };
 		9FD03A0F17FC301700DF810E /* gameoverPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD03A0E17FC301700DF810E /* gameoverPage.m */; };
 		9FDC155917EE949100797FF4 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDC155817EE949100797FF4 /* ViewController2.m */; };
 		9FED2D8517EE8D28008E622A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FED2D8417EE8D28008E622A /* UIKit.framework */; };
@@ -56,6 +57,8 @@
 		30B5CDDD1801743D005BB598 /* rj2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rj2.jpg; sourceTree = "<group>"; };
 		30B5CDDE1801743D005BB598 /* rj3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rj3.jpg; sourceTree = "<group>"; };
 		30B5CDDF1801743D005BB598 /* rj4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rj4.jpg; sourceTree = "<group>"; };
+		9FCCDC471801827600671472 /* scorePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scorePage.h; path = ../scorePage.h; sourceTree = "<group>"; };
+		9FCCDC481801827600671472 /* scorePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = scorePage.m; path = ../scorePage.m; sourceTree = "<group>"; };
 		9FD03A0D17FC301700DF810E /* gameoverPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameoverPage.h; sourceTree = "<group>"; };
 		9FD03A0E17FC301700DF810E /* gameoverPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameoverPage.m; sourceTree = "<group>"; };
 		9FDC155717EE949100797FF4 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 		9FED2D8A17EE8D28008E622A /* Hangman_v01 */ = {
 			isa = PBXGroup;
 			children = (
+				9FCCDC471801827600671472 /* scorePage.h */,
+				9FCCDC481801827600671472 /* scorePage.m */,
 				9FD03A0D17FC301700DF810E /* gameoverPage.h */,
 				9FD03A0E17FC301700DF810E /* gameoverPage.m */,
 				9FDC155817EE949100797FF4 /* ViewController2.m */,
@@ -254,6 +259,7 @@
 				9FDC155917EE949100797FF4 /* ViewController2.m in Sources */,
 				9FD03A0F17FC301700DF810E /* gameoverPage.m in Sources */,
 				305EBE1017FE795D008A278E /* selectChar.m in Sources */,
+				9FCCDC491801827600671472 /* scorePage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

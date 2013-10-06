@@ -20,14 +20,101 @@
 -(NSString*)selectRecordedWord;
 -(void)selectImage;
 -(void)generateScore;
+-(void)saveScore;
+-(void)incrementChar;
+-(void)adjustScore:(int)val;
 @end
 
 @implementation ViewController2
 NSArray *words,*hints,*hangmanimg;
 NSString* blankWord,*wordhint,*name;
 NSString* firstTracker=@"",*secondTracker=@"",*thirdTracker=@"",*fname=@"";
-int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0;
+int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0,t01=0,t02=0,t03=0;
+-(void)adjustScore:(int)val{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *tmp=[[NSArray alloc] initWithObjects:
+                  @"s1",@"s2",@"s3",nil];
+    NSArray *tmp1=[[NSArray alloc] initWithObjects:
+                   @"n1",@"n2",@"n3",nil];
+    NSArray *tmp2=[[NSArray alloc] initWithObjects:
+                   @"t11",@"t12",@"t13",nil];
+    NSArray *tmp3=[[NSArray alloc] initWithObjects:
+                   @"t21",@"t22",@"t23",nil];
+    NSArray *tmp4=[[NSArray alloc] initWithObjects:
+                   @"t31",@"t32",@"t33",nil];
+    int nc=1;
+   
+    switch (val) {
+        case 0:
+            for (nc=1; nc>0; nc--) {
+                [defaults setObject:[defaults objectForKey:tmp1[nc]] forKey:tmp1[nc+1]];
+                [defaults setObject:[defaults objectForKey:tmp[nc]] forKey:tmp[nc+1]];
+                [defaults setObject:[defaults objectForKey:tmp2[nc]] forKey:tmp2[nc+1]];
+                [defaults setObject:[defaults objectForKey:tmp3[nc]] forKey:tmp3[nc+1]];
+                [defaults setObject:[defaults objectForKey:tmp4[nc]] forKey:tmp4[nc+1]];
+            }
+            break;
+        case 1:
+            [defaults setObject:[defaults objectForKey:tmp1[nc]] forKey:tmp1[nc+1]];
+            [defaults setObject:[defaults objectForKey:tmp[nc]] forKey:tmp[nc+1]];
+            [defaults setObject:[defaults objectForKey:tmp2[nc]] forKey:tmp2[nc+1]];
+            [defaults setObject:[defaults objectForKey:tmp3[nc]] forKey:tmp3[nc+1]];
+            [defaults setObject:[defaults objectForKey:tmp4[nc]] forKey:tmp4[nc+1]];
 
+            break;
+            
+        default:
+            break;
+    }
+}
+-(void)incrementChar{
+    if(randomDifficulty==0){
+        t01=t01+1;
+    }else if (randomDifficulty==1){
+        t02=t02+1;
+    }else if (randomDifficulty==2){
+        t03=t03+1;
+    }
+}
+
+-(void)saveScore{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *tmp=[[NSArray alloc] initWithObjects:
+                  @"s1",@"s2",@"s3",nil];
+    NSArray *tmp1=[[NSArray alloc] initWithObjects:
+                  @"n1",@"n2",@"n3",nil];
+    NSArray *tmp2=[[NSArray alloc] initWithObjects:
+                  @"t11",@"t12",@"t13",nil];
+    NSArray *tmp3=[[NSArray alloc] initWithObjects:
+                   @"t21",@"t22",@"t23",nil];
+    NSArray *tmp4=[[NSArray alloc] initWithObjects:
+                   @"t31",@"t32",@"t33",nil];
+    NSString *s;
+    int stmp;
+    for (int cnter=0; cnter<3; cnter++) {
+        s=[defaults objectForKey:tmp[cnter]];
+        stmp=[s integerValue];
+        if (points>stmp) {
+            [self adjustScore:cnter];
+            [defaults setObject:name forKey:tmp1[cnter] ];
+            
+            s=[NSString stringWithFormat:@"%d",points];
+            [defaults setObject:s forKey:tmp[cnter]];
+            
+            s=[NSString stringWithFormat:@"%d",t03];
+            [defaults setObject:s forKey:tmp2[cnter]];
+            
+            s=[NSString stringWithFormat:@"%d",t01];
+            [defaults setObject:s forKey:tmp3[cnter]];
+           
+            s=[NSString stringWithFormat:@"%d",t02];
+            [defaults setObject:s forKey:tmp4[cnter]];
+            break;
+        }
+    }
+  
+    
+}
 
 -(void)generateScore{
     switch (randomDifficulty) {
@@ -48,7 +135,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0;
 -(void)selectImage{
    
     switch (randomDifficulty) {
-        case 0:
+        case 1:
             hangmanimg=[[NSArray alloc] initWithObjects:
                         [UIImage imageNamed:@"kit1.jpg"],
                         [UIImage imageNamed:@"kit2.jpg"],
@@ -57,7 +144,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0;
                         nil];
 
             break;
-        case 1:
+        case 0:
             hangmanimg=[[NSArray alloc] initWithObjects:
                         [UIImage imageNamed:@"rj1.jpg"],
                         [UIImage imageNamed:@"rj2.jpg"],
@@ -68,7 +155,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0;
             break;
         case 2:
             hangmanimg=[[NSArray alloc] initWithObjects:
-                        [UIImage imageNamed:@"dits1.jpsg"],
+                        [UIImage imageNamed:@"dits1.jpg"],
                         [UIImage imageNamed:@"dits2.jpg"],
                         [UIImage imageNamed:@"dits3.jpg"],
                         [UIImage imageNamed:@"dits4.jpg"],
@@ -94,6 +181,9 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0;
     number=0;
     wordhint=@"";
     points=0;
+    t01=0;
+    t02=0;
+    t03=0;
 }
 -(void)recordWord:(int)value{
     switch (randomDifficulty) {
@@ -134,6 +224,8 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0;
     NSRange newWord;
     mistake=0;
     [self generateScore];
+    [self incrementChar];
+    
     fpoints=points;
     for (UIButton *b in self.allButtons) {
         [b setHidden:FALSE];
@@ -169,7 +261,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0;
             
         }
         if(ftrackerFull && strackerFull && ttrackerFull){
-           
+            [self saveScore];
             _fpoints.text=[NSString stringWithFormat:@"%d",fpoints];
             [self reset];
             gameoverPage *npage=[self.storyboard instantiateViewControllerWithIdentifier:@"gameoverPage"];
@@ -254,6 +346,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0;
                                          cancelButtonTitle:@"OK... T_T"
                                          otherButtonTitles: nil];
             [alertDialog show];
+            [self saveScore];
             [self reset];
            
         }
