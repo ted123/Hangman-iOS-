@@ -46,7 +46,9 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0,t01=0,t02
    
     switch (val) {
         case 0:
-            for (nc=1; nc>0; nc--) {
+           
+            for (nc=1; nc>=0; nc--) {
+                
                 [defaults setObject:[defaults objectForKey:tmp1[nc]] forKey:tmp1[nc+1]];
                 [defaults setObject:[defaults objectForKey:tmp[nc]] forKey:tmp[nc+1]];
                 [defaults setObject:[defaults objectForKey:tmp2[nc]] forKey:tmp2[nc+1]];
