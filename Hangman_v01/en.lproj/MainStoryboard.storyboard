@@ -9,7 +9,7 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" title="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkV-Bb-U42">
@@ -54,7 +54,7 @@
             <objects>
                 <viewController storyboardIdentifier="selectChar" title="selectChar" id="VQf-Hs-P73" customClass="selectChar" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Am-v0-YGm">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0V-Gz-rYy">
@@ -173,7 +173,7 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController2" title="ViewController2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H7m-hU-yUM" customClass="ViewController2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFit" id="CaX-L5-tkb">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1je-LC-8OX">
@@ -608,9 +608,11 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Jol-w6-GqE" firstAttribute="trailing" secondItem="fO2-oF-YUa" secondAttribute="trailing" type="default" id="02H-w6-NvM"/>
+                            <constraint firstItem="49H-GP-DF5" firstAttribute="baseline" secondItem="z2P-rc-dEt" secondAttribute="baseline" type="default" id="0dt-AU-hss"/>
                             <constraint firstItem="wV7-bH-o8J" firstAttribute="centerX" secondItem="Nce-Ah-VGJ" secondAttribute="centerX" type="default" id="0uS-PJ-afq"/>
                             <constraint firstAttribute="trailing" secondItem="49H-GP-DF5" secondAttribute="trailing" constant="17" id="13t-fF-kmF"/>
                             <constraint firstItem="1je-LC-8OX" firstAttribute="top" secondItem="CaX-L5-tkb" secondAttribute="top" constant="20" symbolic="YES" type="default" id="1fk-V7-qUo"/>
+                            <constraint firstItem="49H-GP-DF5" firstAttribute="baseline" secondItem="BYO-bs-PiR" secondAttribute="baseline" type="default" id="1ne-ef-iyV"/>
                             <constraint firstItem="nOP-gC-RNY" firstAttribute="leading" secondItem="YF4-wh-Pgn" secondAttribute="leading" type="default" id="2Au-th-Cba"/>
                             <constraint firstItem="gLu-rw-6gR" firstAttribute="bottom" secondItem="a1H-Uq-RRy" secondAttribute="bottom" type="default" id="3nA-Wf-Iz3"/>
                             <constraint firstItem="Nce-Ah-VGJ" firstAttribute="leading" secondItem="CaX-L5-tkb" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4ib-7u-9tC"/>
@@ -631,6 +633,7 @@
                             <constraint firstAttribute="bottom" secondItem="cZn-hZ-mgH" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="G3O-9q-aDy"/>
                             <constraint firstItem="vmt-Wb-HXt" firstAttribute="centerX" secondItem="Nce-Ah-VGJ" secondAttribute="centerX" type="default" id="GPS-8k-h6q"/>
                             <constraint firstItem="cev-Wy-aU0" firstAttribute="bottom" secondItem="HSD-wI-1ZB" secondAttribute="bottom" type="default" id="GPV-vx-npg"/>
+                            <constraint firstItem="49H-GP-DF5" firstAttribute="baseline" secondItem="MFt-sf-Hpw" secondAttribute="baseline" type="default" id="HP9-33-4P6"/>
                             <constraint firstItem="vmt-Wb-HXt" firstAttribute="top" secondItem="CaX-L5-tkb" secondAttribute="top" constant="71" id="HYa-An-gm4"/>
                             <constraint firstItem="z2P-rc-dEt" firstAttribute="top" secondItem="BYO-bs-PiR" secondAttribute="top" type="default" id="IPx-JV-4S0"/>
                             <constraint firstItem="cev-Wy-aU0" firstAttribute="top" secondItem="YF4-wh-Pgn" secondAttribute="top" type="default" id="JFW-ot-pky"/>
@@ -664,6 +667,7 @@
                             <constraint firstItem="biy-tN-rLQ" firstAttribute="top" secondItem="vaI-9h-QdL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="YIo-hX-GXG"/>
                             <constraint firstItem="nOP-gC-RNY" firstAttribute="trailing" secondItem="YF4-wh-Pgn" secondAttribute="trailing" type="default" id="YQP-IW-LAI"/>
                             <constraint firstItem="Jol-w6-GqE" firstAttribute="trailing" secondItem="wV7-bH-o8J" secondAttribute="trailing" type="default" id="Ycu-4I-b90"/>
+                            <constraint firstItem="49H-GP-DF5" firstAttribute="baseline" secondItem="wV7-bH-o8J" secondAttribute="baseline" type="default" id="Z4k-Hr-qAj"/>
                             <constraint firstItem="VYS-Eg-NI2" firstAttribute="leading" secondItem="fO2-oF-YUa" secondAttribute="leading" type="default" id="a1f-U2-s4O"/>
                             <constraint firstItem="biy-tN-rLQ" firstAttribute="leading" secondItem="vaI-9h-QdL" secondAttribute="leading" type="default" id="a4H-eK-wIY"/>
                             <constraint firstItem="biy-tN-rLQ" firstAttribute="bottom" secondItem="mhx-Pe-b3B" secondAttribute="bottom" type="default" id="aLQ-PA-4uH"/>
@@ -765,7 +769,7 @@
             <objects>
                 <viewController storyboardIdentifier="gameoverPage" title="gameoverPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="p10-DN-B74" customClass="gameoverPage" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KqC-fJ-2Qu">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzt-I7-aXm">
@@ -871,6 +875,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
