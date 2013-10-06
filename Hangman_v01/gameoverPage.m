@@ -7,7 +7,7 @@
 //
 
 #import "gameoverPage.h"
-
+#import "ViewController2.h"
 @interface gameoverPage ()
 
 @end
@@ -26,12 +26,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	NSString *names=((ViewController2 *)self.presentingViewController).pname.text;
+    NSString *pt = ((ViewController2 *)self.presentingViewController).fpoints.text;
+    _remarks.text=[NSString stringWithFormat:@"Congratulations %@!",names];
+    _final.text=[NSString stringWithFormat:@"Your total score is: %@",pt];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    
     // Dispose of any resources that can be recreated.
 }
 

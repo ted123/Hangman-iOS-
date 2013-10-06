@@ -19,13 +19,31 @@
 -(void)reset;
 -(NSString*)selectRecordedWord;
 -(void)selectImage;
+-(void)generateScore;
 @end
 
 @implementation ViewController2
 NSArray *words,*hints,*hangmanimg;
 NSString* blankWord,*wordhint,*name;
-NSString* firstTracker=@"",*secondTracker=@"",*thirdTracker=@"";
-int randomIndex,randomDifficulty,mistake=0,number=0;
+NSString* firstTracker=@"",*secondTracker=@"",*thirdTracker=@"",*fname=@"";
+int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0;
+
+
+-(void)generateScore{
+    switch (randomDifficulty) {
+        case 0:
+            points=points+10;
+            break;
+        case 1:
+            points=points+20;
+            break;
+        case 2:
+            points=points+30;
+            break;
+        default:
+            break;
+    }
+}
 
 -(void)selectImage{
    
@@ -75,6 +93,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
     mistake=0;
     number=0;
     wordhint=@"";
+    points=0;
 }
 -(void)recordWord:(int)value{
     switch (randomDifficulty) {
@@ -114,6 +133,8 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
     NSString* numString=@"";
     NSRange newWord;
     mistake=0;
+    [self generateScore];
+    fpoints=points;
     for (UIButton *b in self.allButtons) {
         [b setHidden:FALSE];
        
@@ -148,8 +169,9 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
             
         }
         if(ftrackerFull && strackerFull && ttrackerFull){
+           
+            _fpoints.text=[NSString stringWithFormat:@"%d",fpoints];
             [self reset];
-            //NSLog(@"you wooooon!");
             gameoverPage *npage=[self.storyboard instantiateViewControllerWithIdentifier:@"gameoverPage"];
             
            
@@ -223,15 +245,16 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
         mistake++;
          _himage.image=hangmanimg[mistake];
         if(mistake==3){
-            [self reset];
+            NSString *totalpts=[NSString stringWithFormat:@"Your total score: %d",points];
+            
             UIAlertView *alertDialog;
-            alertDialog= [[UIAlertView alloc] initWithTitle:@"You suck!"
-                                                   message:@"Try again loser!"
+            alertDialog= [[UIAlertView alloc] initWithTitle:@"Game Over!"
+                                                   message:totalpts
                                                   delegate:self
                                          cancelButtonTitle:@"OK... T_T"
                                          otherButtonTitles: nil];
             [alertDialog show];
-            mistake=0;
+            [self reset];
            
         }
     }
@@ -301,6 +324,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0;
     [self selectImage];
     _himage.image=hangmanimg[0];
     _hintlabel.text=hints[randomIndex];
+    _pname.text=name;
     //NSLog(@"%@ difficulty %d",name,randomDifficulty);
 	// Do any additional setup after loading the view.
 }

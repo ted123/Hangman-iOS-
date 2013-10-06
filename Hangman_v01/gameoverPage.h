@@ -10,5 +10,7 @@
 
 @interface gameoverPage : UIViewController
 - (IBAction)quit:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *final;
+@property (weak, nonatomic) IBOutlet UILabel *remarks;
 
 @end

@@ -11,6 +11,8 @@
 @interface ViewController2 : UIViewController
 <UIAlertViewDelegate,UITextFieldDelegate>
 - (IBAction)return:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *pname;
+@property (strong, nonatomic) IBOutlet UITextField *fpoints;
 
 @property (weak, nonatomic) IBOutlet UILabel *answer;
 - (IBAction)buttons:(id)sender;
