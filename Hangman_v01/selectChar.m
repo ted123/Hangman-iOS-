@@ -36,7 +36,29 @@
 }
 
 - (IBAction)begingame:(id)sender {
-    _tobehanged.text=@"1";
-    _playername.text=@"Didz";
+    
+}
+
+- (IBAction)selectorC:(UIButton* )sender {
+    switch ([sender tag]) {
+        case 1:
+            _tobehanged.text=@"2";
+            [_b setHidden:true];
+            [_c setHidden:true];
+            break;
+        case 2:
+            _tobehanged.text=@"0";
+            [_a setHidden:true];
+            [_c setHidden:true];
+            break;
+        case 3:
+            _tobehanged.text=@"1";
+            [_a setHidden:true];
+            [_b setHidden:true];
+            break;
+            
+        default:
+            break;
+    }
 }
 @end

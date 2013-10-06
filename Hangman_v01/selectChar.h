@@ -12,5 +12,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *tobehanged;
 @property (strong, nonatomic) IBOutlet UITextField *playername;
 - (IBAction)begingame:(id)sender;
+- (IBAction)selectorC:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *a;
+@property (strong, nonatomic) IBOutlet UIButton *b;
+@property (strong, nonatomic) IBOutlet UIButton *c;
 
 @end
