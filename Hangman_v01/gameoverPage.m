@@ -5,7 +5,7 @@
 //  Created by Ted on 10/2/13.
 //  Copyright (c) 2013 Ted. All rights reserved.
 //
-
+//nawala ang mga pictures???	
 #import "gameoverPage.h"
 #import "ViewController2.h"
 @interface gameoverPage ()

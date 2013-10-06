@@ -50,28 +50,28 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0;
     switch (randomDifficulty) {
         case 0:
             hangmanimg=[[NSArray alloc] initWithObjects:
-                        [UIImage imageNamed:@"kit1.png"],
-                        [UIImage imageNamed:@"kit2.png"],
-                        [UIImage imageNamed:@"kit3.png"],
-                        [UIImage imageNamed:@"kit4.png"],
+                        [UIImage imageNamed:@"kit1.jpg"],
+                        [UIImage imageNamed:@"kit2.jpg"],
+                        [UIImage imageNamed:@"kit3.jpg"],
+                        [UIImage imageNamed:@"kit4.jpg"],
                         nil];
 
             break;
         case 1:
             hangmanimg=[[NSArray alloc] initWithObjects:
-                        [UIImage imageNamed:@"rj1.png"],
-                        [UIImage imageNamed:@"rj2.png"],
-                        [UIImage imageNamed:@"rj3.png"],
-                        [UIImage imageNamed:@"rj4.png"],
+                        [UIImage imageNamed:@"rj1.jpg"],
+                        [UIImage imageNamed:@"rj2.jpg"],
+                        [UIImage imageNamed:@"rj3.jpg"],
+                        [UIImage imageNamed:@"rj4.jpg"],
                         nil];
             
             break;
         case 2:
             hangmanimg=[[NSArray alloc] initWithObjects:
-                        [UIImage imageNamed:@"didz1.png"],
-                        [UIImage imageNamed:@"didz2.png"],
-                        [UIImage imageNamed:@"didz3.png"],
-                        [UIImage imageNamed:@"didz4.png"],
+                        [UIImage imageNamed:@"dits1.jpsg"],
+                        [UIImage imageNamed:@"dits2.jpg"],
+                        [UIImage imageNamed:@"dits3.jpg"],
+                        [UIImage imageNamed:@"dits4.jpg"],
                         nil];
             
             break;
