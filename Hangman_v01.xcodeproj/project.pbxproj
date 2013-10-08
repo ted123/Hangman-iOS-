@@ -23,6 +23,8 @@
 		30B5CDEC1801743D005BB598 /* rj2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B5CDDD1801743D005BB598 /* rj2.jpg */; };
 		30B5CDED1801743D005BB598 /* rj3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B5CDDE1801743D005BB598 /* rj3.jpg */; };
 		30B5CDEE1801743D005BB598 /* rj4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B5CDDF1801743D005BB598 /* rj4.jpg */; };
+		30EE97F91803CE0F00B2D6B5 /* How2play.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EE97F81803CE0F00B2D6B5 /* How2play.m */; };
+		30EE97FF1803CEEE00B2D6B5 /* Credits.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EE97FE1803CEEE00B2D6B5 /* Credits.m */; };
 		9FCCDC491801827600671472 /* scorePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCDC481801827600671472 /* scorePage.m */; };
 		9FD03A0F17FC301700DF810E /* gameoverPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD03A0E17FC301700DF810E /* gameoverPage.m */; };
 		9FDC155917EE949100797FF4 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDC155817EE949100797FF4 /* ViewController2.m */; };
@@ -57,6 +59,10 @@
 		30B5CDDD1801743D005BB598 /* rj2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rj2.jpg; sourceTree = "<group>"; };
 		30B5CDDE1801743D005BB598 /* rj3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rj3.jpg; sourceTree = "<group>"; };
 		30B5CDDF1801743D005BB598 /* rj4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rj4.jpg; sourceTree = "<group>"; };
+		30EE97F71803CE0F00B2D6B5 /* How2play.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = How2play.h; sourceTree = "<group>"; };
+		30EE97F81803CE0F00B2D6B5 /* How2play.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = How2play.m; sourceTree = "<group>"; };
+		30EE97FD1803CEEE00B2D6B5 /* Credits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Credits.h; sourceTree = "<group>"; };
+		30EE97FE1803CEEE00B2D6B5 /* Credits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Credits.m; sourceTree = "<group>"; };
 		9FCCDC471801827600671472 /* scorePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scorePage.h; path = ../scorePage.h; sourceTree = "<group>"; };
 		9FCCDC481801827600671472 /* scorePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = scorePage.m; path = ../scorePage.m; sourceTree = "<group>"; };
 		9FD03A0D17FC301700DF810E /* gameoverPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameoverPage.h; sourceTree = "<group>"; };
@@ -125,6 +131,8 @@
 		9FED2D8A17EE8D28008E622A /* Hangman_v01 */ = {
 			isa = PBXGroup;
 			children = (
+				30EE97F71803CE0F00B2D6B5 /* How2play.h */,
+				30EE97F81803CE0F00B2D6B5 /* How2play.m */,
 				9FCCDC471801827600671472 /* scorePage.h */,
 				9FCCDC481801827600671472 /* scorePage.m */,
 				9FD03A0D17FC301700DF810E /* gameoverPage.h */,
@@ -134,6 +142,8 @@
 				9FED2D9317EE8D28008E622A /* AppDelegate.h */,
 				9FED2D9417EE8D28008E622A /* AppDelegate.m */,
 				9FED2D9C17EE8D28008E622A /* MainStoryboard.storyboard */,
+				30EE97FD1803CEEE00B2D6B5 /* Credits.h */,
+				30EE97FE1803CEEE00B2D6B5 /* Credits.m */,
 				305EBE0E17FE795D008A278E /* selectChar.h */,
 				305EBE0F17FE795D008A278E /* selectChar.m */,
 				9FED2D9F17EE8D28008E622A /* ViewController.h */,
@@ -260,6 +270,8 @@
 				9FD03A0F17FC301700DF810E /* gameoverPage.m in Sources */,
 				305EBE1017FE795D008A278E /* selectChar.m in Sources */,
 				9FCCDC491801827600671472 /* scorePage.m in Sources */,
+				30EE97F91803CE0F00B2D6B5 /* How2play.m in Sources */,
+				30EE97FF1803CEEE00B2D6B5 /* Credits.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

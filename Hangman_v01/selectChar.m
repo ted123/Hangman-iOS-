@@ -17,7 +17,7 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+   		 if (self) {
         // Custom initialization
     }
     return self;
@@ -35,6 +35,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)pname:(id)sender {
+    
+    
+    [sender resignFirstResponder];
+}
+
 - (IBAction)begingame:(id)sender {
     
 }
@@ -45,16 +51,22 @@
             _tobehanged.text=@"2";
             [_b setHidden:true];
             [_c setHidden:true];
+            [_rjname setHidden:true];
+            [_kitname setHidden:true];
             break;
         case 2:
             _tobehanged.text=@"0";
             [_a setHidden:true];
             [_c setHidden:true];
+            [_ditzname setHidden:true];
+            [_kitname setHidden:true];
             break;
         case 3:
             _tobehanged.text=@"1";
             [_a setHidden:true];
             [_b setHidden:true];
+            [_ditzname setHidden:true];
+            [_rjname setHidden:true];
             break;
             
         default:
