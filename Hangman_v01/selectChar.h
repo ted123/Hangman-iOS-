@@ -7,16 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface selectChar : UIViewController
 @property (strong, nonatomic) IBOutlet UITextField *tobehanged;
 @property (strong, nonatomic) IBOutlet UITextField *playername;
 @property (weak, nonatomic) IBOutlet UILabel *rjname;
+- (IBAction)placinginput:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *kitname;
 @property (weak, nonatomic) IBOutlet UILabel *ditzname;
+@property (weak, nonatomic) IBOutlet UILabel *l1;
 
 - (IBAction)pname:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *startgame;
 
 
 - (IBAction)begingame:(id)sender;

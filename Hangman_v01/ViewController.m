@@ -17,7 +17,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	SystemSoundID soundID;
+    NSString *soundFile = [[NSBundle mainBundle]pathForResource:@"open"ofType:@"wav"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile] , &soundID);
+    AudioServicesPlayAlertSound(soundID);
+    
+    
+    
+    
+    
+    
     }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +35,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)playAction:(id)sender {
+    
+SystemSoundID soundID;
+NSString *soundFile = [[NSBundle mainBundle]pathForResource:@"Teleport swish"ofType:@"mp3"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile] , &soundID);
+    AudioServicesPlayAlertSound(soundID);
+}
 @end

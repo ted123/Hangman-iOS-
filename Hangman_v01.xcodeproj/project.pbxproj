@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		305EBE1017FE795D008A278E /* selectChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 305EBE0F17FE795D008A278E /* selectChar.m */; };
+		308907CF180529090078A6BE /* suicide.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308907CE180529090078A6BE /* suicide.jpg */; };
+		308907D6180532300078A6BE /* backton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308907D1180532300078A6BE /* backton.jpg */; };
+		308907D7180532300078A6BE /* backton2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308907D2180532300078A6BE /* backton2.jpg */; };
+		308907D8180532300078A6BE /* backton3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308907D3180532300078A6BE /* backton3.jpg */; };
+		308907D9180532300078A6BE /* credits.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308907D4180532300078A6BE /* credits.jpg */; };
+		308907DA180532300078A6BE /* howto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308907D5180532300078A6BE /* howto.jpg */; };
 		30B5CDE01801743D005BB598 /* dits.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B5CDD11801743D005BB598 /* dits.jpg */; };
 		30B5CDE11801743D005BB598 /* dits1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B5CDD21801743D005BB598 /* dits1.jpg */; };
 		30B5CDE21801743D005BB598 /* dits2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B5CDD31801743D005BB598 /* dits2.jpg */; };
@@ -23,8 +29,15 @@
 		30B5CDEC1801743D005BB598 /* rj2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B5CDDD1801743D005BB598 /* rj2.jpg */; };
 		30B5CDED1801743D005BB598 /* rj3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B5CDDE1801743D005BB598 /* rj3.jpg */; };
 		30B5CDEE1801743D005BB598 /* rj4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30B5CDDF1801743D005BB598 /* rj4.jpg */; };
+		30D00F201804556500CA7B8A /* homeiOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 30D00F1F1804556500CA7B8A /* homeiOS.png */; };
+		30D012DD180469B900CA7B8A /* open.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30D012DC180469B900CA7B8A /* open.wav */; };
+		30D012E118046B4000CA7B8A /* chimes.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30D012DE18046B4000CA7B8A /* chimes.wav */; };
+		30D012E218046B4000CA7B8A /* misc229.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30D012DF18046B4000CA7B8A /* misc229.wav */; };
+		30D012E318046B4000CA7B8A /* Teleport swish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30D012E018046B4000CA7B8A /* Teleport swish.mp3 */; };
 		30EE97F91803CE0F00B2D6B5 /* How2play.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EE97F81803CE0F00B2D6B5 /* How2play.m */; };
 		30EE97FF1803CEEE00B2D6B5 /* Credits.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EE97FE1803CEEE00B2D6B5 /* Credits.m */; };
+		30EE98091803D77A00B2D6B5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30EE98081803D77A00B2D6B5 /* AudioToolbox.framework */; };
+		30EE980C1803DB0600B2D6B5 /* beep-3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30EE980B1803DB0600B2D6B5 /* beep-3.wav */; };
 		9FCCDC491801827600671472 /* scorePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FCCDC481801827600671472 /* scorePage.m */; };
 		9FD03A0F17FC301700DF810E /* gameoverPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD03A0E17FC301700DF810E /* gameoverPage.m */; };
 		9FDC155917EE949100797FF4 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FDC155817EE949100797FF4 /* ViewController2.m */; };
@@ -44,6 +57,12 @@
 /* Begin PBXFileReference section */
 		305EBE0E17FE795D008A278E /* selectChar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectChar.h; sourceTree = "<group>"; };
 		305EBE0F17FE795D008A278E /* selectChar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectChar.m; sourceTree = "<group>"; };
+		308907CE180529090078A6BE /* suicide.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = suicide.jpg; sourceTree = "<group>"; };
+		308907D1180532300078A6BE /* backton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backton.jpg; sourceTree = "<group>"; };
+		308907D2180532300078A6BE /* backton2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backton2.jpg; sourceTree = "<group>"; };
+		308907D3180532300078A6BE /* backton3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backton3.jpg; sourceTree = "<group>"; };
+		308907D4180532300078A6BE /* credits.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = credits.jpg; sourceTree = "<group>"; };
+		308907D5180532300078A6BE /* howto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = howto.jpg; sourceTree = "<group>"; };
 		30B5CDD11801743D005BB598 /* dits.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dits.jpg; sourceTree = "<group>"; };
 		30B5CDD21801743D005BB598 /* dits1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dits1.jpg; sourceTree = "<group>"; };
 		30B5CDD31801743D005BB598 /* dits2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dits2.jpg; sourceTree = "<group>"; };
@@ -59,10 +78,17 @@
 		30B5CDDD1801743D005BB598 /* rj2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rj2.jpg; sourceTree = "<group>"; };
 		30B5CDDE1801743D005BB598 /* rj3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rj3.jpg; sourceTree = "<group>"; };
 		30B5CDDF1801743D005BB598 /* rj4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rj4.jpg; sourceTree = "<group>"; };
+		30D00F1F1804556500CA7B8A /* homeiOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeiOS.png; sourceTree = "<group>"; };
+		30D012DC180469B900CA7B8A /* open.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = open.wav; sourceTree = "<group>"; };
+		30D012DE18046B4000CA7B8A /* chimes.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chimes.wav; sourceTree = "<group>"; };
+		30D012DF18046B4000CA7B8A /* misc229.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = misc229.wav; sourceTree = "<group>"; };
+		30D012E018046B4000CA7B8A /* Teleport swish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Teleport swish.mp3"; sourceTree = "<group>"; };
 		30EE97F71803CE0F00B2D6B5 /* How2play.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = How2play.h; sourceTree = "<group>"; };
 		30EE97F81803CE0F00B2D6B5 /* How2play.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = How2play.m; sourceTree = "<group>"; };
 		30EE97FD1803CEEE00B2D6B5 /* Credits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Credits.h; sourceTree = "<group>"; };
 		30EE97FE1803CEEE00B2D6B5 /* Credits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Credits.m; sourceTree = "<group>"; };
+		30EE98081803D77A00B2D6B5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		30EE980B1803DB0600B2D6B5 /* beep-3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-3.wav"; sourceTree = "<group>"; };
 		9FCCDC471801827600671472 /* scorePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scorePage.h; path = ../scorePage.h; sourceTree = "<group>"; };
 		9FCCDC481801827600671472 /* scorePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = scorePage.m; path = ../scorePage.m; sourceTree = "<group>"; };
 		9FD03A0D17FC301700DF810E /* gameoverPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameoverPage.h; sourceTree = "<group>"; };
@@ -95,6 +121,7 @@
 				9FED2D8517EE8D28008E622A /* UIKit.framework in Frameworks */,
 				9FED2D8717EE8D28008E622A /* Foundation.framework in Frameworks */,
 				9FED2D8917EE8D28008E622A /* CoreGraphics.framework in Frameworks */,
+				30EE98091803D77A00B2D6B5 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +148,7 @@
 		9FED2D8317EE8D28008E622A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30EE98081803D77A00B2D6B5 /* AudioToolbox.framework */,
 				9FED2D8417EE8D28008E622A /* UIKit.framework */,
 				9FED2D8617EE8D28008E622A /* Foundation.framework */,
 				9FED2D8817EE8D28008E622A /* CoreGraphics.framework */,
@@ -156,6 +184,18 @@
 		9FED2D8B17EE8D28008E622A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				308907D1180532300078A6BE /* backton.jpg */,
+				308907D2180532300078A6BE /* backton2.jpg */,
+				308907D3180532300078A6BE /* backton3.jpg */,
+				308907D4180532300078A6BE /* credits.jpg */,
+				308907D5180532300078A6BE /* howto.jpg */,
+				308907CE180529090078A6BE /* suicide.jpg */,
+				30D012DE18046B4000CA7B8A /* chimes.wav */,
+				30D012DF18046B4000CA7B8A /* misc229.wav */,
+				30D012E018046B4000CA7B8A /* Teleport swish.mp3 */,
+				30D012DC180469B900CA7B8A /* open.wav */,
+				30D00F1F1804556500CA7B8A /* homeiOS.png */,
+				30EE980B1803DB0600B2D6B5 /* beep-3.wav */,
 				30B5CDD11801743D005BB598 /* dits.jpg */,
 				30B5CDD21801743D005BB598 /* dits1.jpg */,
 				30B5CDD31801743D005BB598 /* dits2.jpg */,
@@ -253,6 +293,18 @@
 				30B5CDEC1801743D005BB598 /* rj2.jpg in Resources */,
 				30B5CDED1801743D005BB598 /* rj3.jpg in Resources */,
 				30B5CDEE1801743D005BB598 /* rj4.jpg in Resources */,
+				30EE980C1803DB0600B2D6B5 /* beep-3.wav in Resources */,
+				30D00F201804556500CA7B8A /* homeiOS.png in Resources */,
+				30D012DD180469B900CA7B8A /* open.wav in Resources */,
+				30D012E118046B4000CA7B8A /* chimes.wav in Resources */,
+				30D012E218046B4000CA7B8A /* misc229.wav in Resources */,
+				30D012E318046B4000CA7B8A /* Teleport swish.mp3 in Resources */,
+				308907CF180529090078A6BE /* suicide.jpg in Resources */,
+				308907D6180532300078A6BE /* backton.jpg in Resources */,
+				308907D7180532300078A6BE /* backton2.jpg in Resources */,
+				308907D8180532300078A6BE /* backton3.jpg in Resources */,
+				308907D9180532300078A6BE /* credits.jpg in Resources */,
+				308907DA180532300078A6BE /* howto.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

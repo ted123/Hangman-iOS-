@@ -43,16 +43,33 @@
 
 - (IBAction)begingame:(id)sender {
     
+    
 }
 
 - (IBAction)selectorC:(UIButton* )sender {
+    
+    SystemSoundID soundID;
+    NSString *soundFile = [[NSBundle mainBundle]pathForResource:@"misc229"ofType:@"wav"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile] , &soundID);
+    AudioServicesPlayAlertSound(soundID);
+    
     switch ([sender tag]) {
         case 1:
+            
+         
+            
+            
+            
+            
+            
+            
             _tobehanged.text=@"2";
             [_b setHidden:true];
             [_c setHidden:true];
             [_rjname setHidden:true];
             [_kitname setHidden:true];
+            
+            
             break;
         case 2:
             _tobehanged.text=@"0";
@@ -72,5 +89,10 @@
         default:
             break;
     }
+    [_playername setHidden:false];
+    [_l1 setHidden:false];
+}
+- (IBAction)placinginput:(id)sender {
+    [_startgame setHidden:false];
 }
 @end

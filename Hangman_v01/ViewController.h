@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
+
 
 @interface ViewController : UIViewController
+- (IBAction)playAction:(id)sender;
 
 @end
