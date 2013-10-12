@@ -338,7 +338,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0,t01=0,t02
     
     if(!change){
        
-        NSString *soundFile = [[NSBundle mainBundle]pathForResource:@"haha"ofType:@"wav"];
+        NSString *soundFile = [[NSBundle mainBundle]pathForResource:@"Arcade Alarm 04"ofType:@"wav"];
         AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile] , &soundID);
         AudioServicesPlayAlertSound(soundID);
 
@@ -348,7 +348,9 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0,t01=0,t02
         
         if(mistake==3){
             NSString *totalpts=[NSString stringWithFormat:@"Your total score: %d",points];
-            
+            NSString *soundFile = [[NSBundle mainBundle]pathForResource:@"Game Over 01"ofType:@"wav"];
+            AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile] , &soundID);
+            AudioServicesPlayAlertSound(soundID);
             UIAlertView *alertDialog;
             alertDialog= [[UIAlertView alloc] initWithTitle:@"Game Over!"
                                                    message:totalpts
@@ -457,7 +459,10 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0,t01=0,t02
     [selected setHidden:true];
     
     if([_answer.text isEqualToString:blankWord]){
-       
+        SystemSoundID soundID;
+        NSString *soundFile = [[NSBundle mainBundle]pathForResource:@"clap"ofType:@"wav"];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile] , &soundID);
+        AudioServicesPlayAlertSound(soundID);
         UIAlertView *congratsDialog;
         congratsDialog= [[UIAlertView alloc] initWithTitle:@"Congratulations!"
                                                 message:@"You have succesfully guessed the word/phrase!"

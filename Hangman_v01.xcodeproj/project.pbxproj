@@ -43,6 +43,9 @@
 		308E909C1809152C00B2F67C /* daug.wav in Resources */ = {isa = PBXBuildFile; fileRef = 308E90991809152C00B2F67C /* daug.wav */; };
 		308E909D1809152C00B2F67C /* haha.wav in Resources */ = {isa = PBXBuildFile; fileRef = 308E909A1809152C00B2F67C /* haha.wav */; };
 		308E90A01809186400B2F67C /* exec.png in Resources */ = {isa = PBXBuildFile; fileRef = 308E909F1809186400B2F67C /* exec.png */; };
+		308E90A41809238A00B2F67C /* Arcade Alarm 04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 308E90A11809238A00B2F67C /* Arcade Alarm 04.wav */; };
+		308E90A51809238A00B2F67C /* clap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 308E90A21809238A00B2F67C /* clap.wav */; };
+		308E90A61809238A00B2F67C /* Game Over 01.wav in Resources */ = {isa = PBXBuildFile; fileRef = 308E90A31809238A00B2F67C /* Game Over 01.wav */; };
 		30D00F201804556500CA7B8A /* homeiOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 30D00F1F1804556500CA7B8A /* homeiOS.png */; };
 		30D012DD180469B900CA7B8A /* open.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30D012DC180469B900CA7B8A /* open.wav */; };
 		30D012E118046B4000CA7B8A /* chimes.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30D012DE18046B4000CA7B8A /* chimes.wav */; };
@@ -106,6 +109,9 @@
 		308E90991809152C00B2F67C /* daug.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = daug.wav; sourceTree = "<group>"; };
 		308E909A1809152C00B2F67C /* haha.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = haha.wav; sourceTree = "<group>"; };
 		308E909F1809186400B2F67C /* exec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exec.png; sourceTree = "<group>"; };
+		308E90A11809238A00B2F67C /* Arcade Alarm 04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Arcade Alarm 04.wav"; sourceTree = "<group>"; };
+		308E90A21809238A00B2F67C /* clap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clap.wav; sourceTree = "<group>"; };
+		308E90A31809238A00B2F67C /* Game Over 01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Game Over 01.wav"; sourceTree = "<group>"; };
 		30D00F1F1804556500CA7B8A /* homeiOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeiOS.png; sourceTree = "<group>"; };
 		30D012DC180469B900CA7B8A /* open.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = open.wav; sourceTree = "<group>"; };
 		30D012DE18046B4000CA7B8A /* chimes.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chimes.wav; sourceTree = "<group>"; };
@@ -212,6 +218,9 @@
 		9FED2D8B17EE8D28008E622A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				308E90A11809238A00B2F67C /* Arcade Alarm 04.wav */,
+				308E90A21809238A00B2F67C /* clap.wav */,
+				308E90A31809238A00B2F67C /* Game Over 01.wav */,
 				308E909F1809186400B2F67C /* exec.png */,
 				308E90981809152C00B2F67C /* correct beep.mp3 */,
 				308E90991809152C00B2F67C /* daug.wav */,
@@ -361,6 +370,9 @@
 				308E909C1809152C00B2F67C /* daug.wav in Resources */,
 				308E909D1809152C00B2F67C /* haha.wav in Resources */,
 				308E90A01809186400B2F67C /* exec.png in Resources */,
+				308E90A41809238A00B2F67C /* Arcade Alarm 04.wav in Resources */,
+				308E90A51809238A00B2F67C /* clap.wav in Resources */,
+				308E90A61809238A00B2F67C /* Game Over 01.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
