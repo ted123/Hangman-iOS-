@@ -139,28 +139,28 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0,t01=0,t02
     switch (randomDifficulty) {
         case 1:
             hangmanimg=[[NSArray alloc] initWithObjects:
-                        [UIImage imageNamed:@"kit1.jpg"],
-                        [UIImage imageNamed:@"kit2.jpg"],
-                        [UIImage imageNamed:@"kit3.jpg"],
-                        [UIImage imageNamed:@"kit4.jpg"],
+                        [UIImage imageNamed:@"kit1.png"],
+                        [UIImage imageNamed:@"kit2.png"],
+                        [UIImage imageNamed:@"kit3.png"],
+                        [UIImage imageNamed:@"kit4.png"],
                         nil];
 
             break;
         case 0:
             hangmanimg=[[NSArray alloc] initWithObjects:
-                        [UIImage imageNamed:@"rj1.jpg"],
-                        [UIImage imageNamed:@"rj2.jpg"],
-                        [UIImage imageNamed:@"rj3.jpg"],
-                        [UIImage imageNamed:@"rj4.jpg"],
+                        [UIImage imageNamed:@"rj1.png"],
+                        [UIImage imageNamed:@"rj2.png"],
+                        [UIImage imageNamed:@"rj3.png"],
+                        [UIImage imageNamed:@"rj4.png"],
                         nil];
             
             break;
         case 2:
             hangmanimg=[[NSArray alloc] initWithObjects:
-                        [UIImage imageNamed:@"dits1.jpg"],
-                        [UIImage imageNamed:@"dits2.jpg"],
-                        [UIImage imageNamed:@"dits3.jpg"],
-                        [UIImage imageNamed:@"dits4.jpg"],
+                        [UIImage imageNamed:@"dits1.png"],
+                        [UIImage imageNamed:@"dits2.png"],
+                        [UIImage imageNamed:@"dits3.png"],
+                        [UIImage imageNamed:@"dits4.png"],
                         nil];
             
             break;
@@ -303,6 +303,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0,t01=0,t02
         }else{
             _answer.text=[_answer.text stringByAppendingFormat:@" "];
         }
+        _answer.textAlignment=NSTextAlignmentCenter;
             
     }
 }
