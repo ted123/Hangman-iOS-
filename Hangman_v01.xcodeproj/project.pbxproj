@@ -39,6 +39,10 @@
 		308907D7180532300078A6BE /* backton2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308907D2180532300078A6BE /* backton2.jpg */; };
 		308907D8180532300078A6BE /* backton3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308907D3180532300078A6BE /* backton3.jpg */; };
 		308907DA180532300078A6BE /* howto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 308907D5180532300078A6BE /* howto.jpg */; };
+		308E909B1809152C00B2F67C /* correct beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 308E90981809152C00B2F67C /* correct beep.mp3 */; };
+		308E909C1809152C00B2F67C /* daug.wav in Resources */ = {isa = PBXBuildFile; fileRef = 308E90991809152C00B2F67C /* daug.wav */; };
+		308E909D1809152C00B2F67C /* haha.wav in Resources */ = {isa = PBXBuildFile; fileRef = 308E909A1809152C00B2F67C /* haha.wav */; };
+		308E90A01809186400B2F67C /* exec.png in Resources */ = {isa = PBXBuildFile; fileRef = 308E909F1809186400B2F67C /* exec.png */; };
 		30D00F201804556500CA7B8A /* homeiOS.png in Resources */ = {isa = PBXBuildFile; fileRef = 30D00F1F1804556500CA7B8A /* homeiOS.png */; };
 		30D012DD180469B900CA7B8A /* open.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30D012DC180469B900CA7B8A /* open.wav */; };
 		30D012E118046B4000CA7B8A /* chimes.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30D012DE18046B4000CA7B8A /* chimes.wav */; };
@@ -98,6 +102,10 @@
 		308907D2180532300078A6BE /* backton2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backton2.jpg; sourceTree = "<group>"; };
 		308907D3180532300078A6BE /* backton3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backton3.jpg; sourceTree = "<group>"; };
 		308907D5180532300078A6BE /* howto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = howto.jpg; sourceTree = "<group>"; };
+		308E90981809152C00B2F67C /* correct beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "correct beep.mp3"; sourceTree = "<group>"; };
+		308E90991809152C00B2F67C /* daug.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = daug.wav; sourceTree = "<group>"; };
+		308E909A1809152C00B2F67C /* haha.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = haha.wav; sourceTree = "<group>"; };
+		308E909F1809186400B2F67C /* exec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exec.png; sourceTree = "<group>"; };
 		30D00F1F1804556500CA7B8A /* homeiOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeiOS.png; sourceTree = "<group>"; };
 		30D012DC180469B900CA7B8A /* open.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = open.wav; sourceTree = "<group>"; };
 		30D012DE18046B4000CA7B8A /* chimes.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chimes.wav; sourceTree = "<group>"; };
@@ -204,6 +212,10 @@
 		9FED2D8B17EE8D28008E622A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				308E909F1809186400B2F67C /* exec.png */,
+				308E90981809152C00B2F67C /* correct beep.mp3 */,
+				308E90991809152C00B2F67C /* daug.wav */,
+				308E909A1809152C00B2F67C /* haha.wav */,
 				3059193A1809058F005395F1 /* hangman.png */,
 				30591938180903F7005395F1 /* rjinfo.png */,
 				30591936180903EE005395F1 /* kitinfo.png */,
@@ -345,6 +357,10 @@
 				30591937180903EF005395F1 /* kitinfo.png in Resources */,
 				30591939180903F9005395F1 /* rjinfo.png in Resources */,
 				3059193B18090591005395F1 /* hangman.png in Resources */,
+				308E909B1809152C00B2F67C /* correct beep.mp3 in Resources */,
+				308E909C1809152C00B2F67C /* daug.wav in Resources */,
+				308E909D1809152C00B2F67C /* haha.wav in Resources */,
+				308E90A01809186400B2F67C /* exec.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

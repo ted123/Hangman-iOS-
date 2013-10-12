@@ -315,7 +315,7 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0,t01=0,t02
     NSString* ans_prev=_answer.text;
     unichar ch;
     Boolean change=FALSE;
-  
+     SystemSoundID soundID;
     _answer.text=@"";
     for (int i=0; i<blankWord.length; i++) {
             ch = [blankWord characterAtIndex:i];
@@ -337,8 +337,15 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0,t01=0,t02
     }
     
     if(!change){
+       
+        NSString *soundFile = [[NSBundle mainBundle]pathForResource:@"haha"ofType:@"wav"];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile] , &soundID);
+        AudioServicesPlayAlertSound(soundID);
+
+        
         mistake++;
          _himage.image=hangmanimg[mistake];
+        
         if(mistake==3){
             NSString *totalpts=[NSString stringWithFormat:@"Your total score: %d",points];
             
@@ -353,6 +360,10 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0,t01=0,t02
             [self reset];
            
         }
+    }else{
+        NSString *soundFile = [[NSBundle mainBundle]pathForResource:@"correct beep"ofType:@"mp3"];
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile] , &soundID);
+        AudioServicesPlayAlertSound(soundID);
     }
 }
 
@@ -384,12 +395,12 @@ int randomIndex,randomDifficulty,mistake=0,number=0,points=0,fpoints=0,t01=0,t02
             hints = [NSArray arrayWithObjects:@"Facial Epression",@"A negative trait",@"A kind of bread",nil];
             break;
         case 1:
-            words = [NSArray arrayWithObjects:@"A",@"BB",@"CCC",nil];
-             hints = [NSArray arrayWithObjects:@"A letter",@"A letter",@"A letter",nil];
+            words = [NSArray arrayWithObjects:@"COMPUTER",@"CELLPHONE",@"HAPPY",nil];
+             hints = [NSArray arrayWithObjects:@"A Gadget",@"A device used to text",@"A kind of emotion",nil];
             break;
         case 2:
-            words = [NSArray arrayWithObjects:@"DDDD",@"EEEEEE",@"FFFFFF",nil];
-            hints = [NSArray arrayWithObjects:@"A letter",@"A letter",@"A letter",nil];
+            words = [NSArray arrayWithObjects:@"CANDY",@"RAINBOW",@"GLASS",nil];
+            hints = [NSArray arrayWithObjects:@"Something Sweet",@"Colorful",@"Used to drink water",nil];
         default:
             break;
     }

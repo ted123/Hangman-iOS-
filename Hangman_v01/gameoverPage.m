@@ -30,6 +30,10 @@
     NSString *pt = ((ViewController2 *)self.presentingViewController).fpoints.text;
     _remarks.text=[NSString stringWithFormat:@"Congratulations %@!",names];
     _final.text=[NSString stringWithFormat:@"Your total score is: %@",pt];
+    SystemSoundID soundID;
+    NSString *soundFile = [[NSBundle mainBundle]pathForResource:@"daug"ofType:@"wav"];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:soundFile] , &soundID);
+    AudioServicesPlayAlertSound(soundID);
 }
 
 - (void)didReceiveMemoryWarning

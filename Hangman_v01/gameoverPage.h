@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AudioToolbox/AudioToolbox.h>
 @interface gameoverPage : UIViewController
 - (IBAction)quit:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *final;
